@@ -338,10 +338,14 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/VSSettingsProvider.ref.dll"
 "Assets/Scripts/Camera.cs"
+"Assets/Scripts/Chest.cs"
+"Assets/Scripts/Collectable.cs"
+"Assets/Scripts/Collidable.cs"
 "Assets/Scripts/Enemy.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/Inventory.cs"
 "Assets/Scripts/Player.cs"
+"Assets/Scripts/Portal.cs"
 -langversion:8.0
 
 /deterministic

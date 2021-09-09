@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2021.1/staging' branch; Version is '2021.1.7f1 (d91830b65d9b) revision 14227504'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Education; OS build 19043.1165; Version 2009; 64bit' Language: 'en' Physical Memory: 32714 MB
+OS: 'Windows 10 Education; OS build 19043.1202; Version 2009; 64bit' Language: 'en' Physical Memory: 32714 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
@@ -15,11 +15,11 @@ C:/Users/Ngin/Documents/Unity projects/Dungeon Dynasty
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-61485
+57200
 Successfully changed project path to: C:/Users/Ngin/Documents/Unity projects/Dungeon Dynasty
 C:/Users/Ngin/Documents/Unity projects/Dungeon Dynasty
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 67.17 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 66.46 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.1.7f1 (d91830b65d9b)
 [Subsystems] Discovering subsystems at path D:/Apps Libraries/Unity/2021.1.7f1/Editor/Data/Resources/UnitySubsystems
@@ -35,46 +35,214 @@ Initialize mono
 Mono path[0] = 'D:/Apps Libraries/Unity/2021.1.7f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Apps Libraries/Unity/2021.1.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/Apps Libraries/Unity/2021.1.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56020
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56932
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Apps Libraries/Unity/2021.1.7f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: D:/Apps Libraries/Unity/2021.1.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.000862 seconds.
+Registered in 0.000854 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 67.94 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 70.78 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.689 seconds
+- Completed reload, in  0.703 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002206 seconds.
+Registered in 0.002511 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\Ngin\Documents\Unity projects\Dungeon Dynasty\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\Ngin\Documents\Unity projects\Dungeon Dynasty\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 70.91 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 70.64 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.747 seconds
+- Completed reload, in  0.739 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.11 seconds
-Refreshing native plugins compatible for Editor in 0.58 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.54 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3376 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 128.0 MB.
-System memory in use after: 128.1 MB.
+Unloading 3377 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 128.3 MB.
+System memory in use after: 128.4 MB.
 
-Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 3829.
-Total: 2.034000 ms (FindLiveObjects: 0.240400 ms CreateObjectMapping: 0.073100 ms MarkObjects: 1.629600 ms  DeleteObjects: 0.089400 ms)
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 3831.
+Total: 2.305500 ms (FindLiveObjects: 0.220300 ms CreateObjectMapping: 0.106000 ms MarkObjects: 1.884100 ms  DeleteObjects: 0.094400 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scripts/test
-  artifactKey: Guid(9ef97ef97e8ffbc4c9585577b6ef1a55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/test using Guid(9ef97ef97e8ffbc4c9585577b6ef1a55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20d8851f2c3ec089e11111c4736635c6') in 0.008716 seconds 
+  path: Assets/Scripts/Collidable.cs
+  artifactKey: Guid(183e6469f634b724f950e55fb8f96e41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Collidable.cs using Guid(183e6469f634b724f950e55fb8f96e41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28f8fe2a791f7f97bd5c207e626c92e1') in 0.025420 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 53.545718 seconds.
+  path: Assets/Scripts/Collidable.cs
+  artifactKey: Guid(183e6469f634b724f950e55fb8f96e41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Collidable.cs using Guid(183e6469f634b724f950e55fb8f96e41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34390d7c16e08771941cd2daf7cfc99b') in 0.001732 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 115.649850 seconds.
+  path: Assets/Scripts/Collidable.cs
+  artifactKey: Guid(183e6469f634b724f950e55fb8f96e41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Collidable.cs using Guid(183e6469f634b724f950e55fb8f96e41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eda5c92c045428da44f01b3769f3596d') in 0.002531 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 51.776768 seconds.
+  path: Assets/Scripts/Collidable.cs
+  artifactKey: Guid(183e6469f634b724f950e55fb8f96e41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Collidable.cs using Guid(183e6469f634b724f950e55fb8f96e41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3630fa69730ee0cbd793e9c505d24809') in 0.002700 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 37.560945 seconds.
+  path: Assets/Scripts/Collidable.cs
+  artifactKey: Guid(183e6469f634b724f950e55fb8f96e41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Collidable.cs using Guid(183e6469f634b724f950e55fb8f96e41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4f386a1135153db79b53a033c4eae6f') in 0.002459 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 107.326649 seconds.
+  path: Assets/Scripts/Collidable.cs
+  artifactKey: Guid(183e6469f634b724f950e55fb8f96e41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Collidable.cs using Guid(183e6469f634b724f950e55fb8f96e41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b7108d537dea6aaa85abd1013e271d0') in 0.002726 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001842 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Ngin\Documents\Unity projects\Dungeon Dynasty\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Ngin\Documents\Unity projects\Dungeon Dynasty\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.67 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.637 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.61 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3372 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 128.3 MB.
+System memory in use after: 128.4 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 3835.
+Total: 2.384500 ms (FindLiveObjects: 0.278000 ms CreateObjectMapping: 0.143000 ms MarkObjects: 1.885400 ms  DeleteObjects: 0.077400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001905 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Ngin\Documents\Unity projects\Dungeon Dynasty\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Ngin\Documents\Unity projects\Dungeon Dynasty\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.61 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.603 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.55 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3372 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 128.4 MB.
+System memory in use after: 128.5 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 3839.
+Total: 2.065200 ms (FindLiveObjects: 0.216800 ms CreateObjectMapping: 0.104800 ms MarkObjects: 1.680600 ms  DeleteObjects: 0.062500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002110 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Ngin\Documents\Unity projects\Dungeon Dynasty\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Ngin\Documents\Unity projects\Dungeon Dynasty\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.60 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.605 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.52 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3372 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 128.4 MB.
+System memory in use after: 128.5 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 3843.
+Total: 1.910900 ms (FindLiveObjects: 0.195800 ms CreateObjectMapping: 0.102800 ms MarkObjects: 1.558700 ms  DeleteObjects: 0.053000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001975 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Ngin\Documents\Unity projects\Dungeon Dynasty\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Ngin\Documents\Unity projects\Dungeon Dynasty\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.61 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.631 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.58 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3372 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 128.5 MB.
+System memory in use after: 128.6 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 3847.
+Total: 2.080400 ms (FindLiveObjects: 0.279800 ms CreateObjectMapping: 0.099100 ms MarkObjects: 1.636300 ms  DeleteObjects: 0.064600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001844 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Ngin\Documents\Unity projects\Dungeon Dynasty\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Ngin\Documents\Unity projects\Dungeon Dynasty\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.64 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.639 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.56 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3372 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 128.5 MB.
+System memory in use after: 128.6 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 3851.
+Total: 1.935500 ms (FindLiveObjects: 0.212300 ms CreateObjectMapping: 0.084700 ms MarkObjects: 1.571900 ms  DeleteObjects: 0.066000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001939 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Ngin\Documents\Unity projects\Dungeon Dynasty\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Ngin\Documents\Unity projects\Dungeon Dynasty\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.60 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.588 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.52 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3372 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 128.5 MB.
+System memory in use after: 128.6 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 3855.
+Total: 1.956900 ms (FindLiveObjects: 0.198100 ms CreateObjectMapping: 0.082200 ms MarkObjects: 1.620800 ms  DeleteObjects: 0.055100 ms)
+
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

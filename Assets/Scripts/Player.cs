@@ -32,13 +32,13 @@ public class Player : MonoBehaviour
         if(hit.collider == null)
         {
             transform.Translate(0, moveDelta.y * Time.deltaTime * movespeed ,0);// * movespeed,0);
-            print("smth");
+
         }
         hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x,0), Mathf.Abs(moveDelta.x * Time.deltaTime * movespeed), LayerMask.GetMask("NPCs", "Blockings"));
         if (hit.collider == null)
         {
             transform.Translate(moveDelta.x * Time.deltaTime* movespeed, 0, 0);// * movespeed, 0, 0);// ; ;
-            print("smth");
+
         }
         
         //transform.Translate(moveDelta * Time.deltaTime * movespeed);
