@@ -8,12 +8,12 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - NPCs
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Interactables
+  - Blockings
+  - Player
   - 
   - 
   - 
@@ -40,4 +40,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Floor
+    uniqueID: 3323560433
+    locked: 0
+  - name: Buildings
+    uniqueID: 3282383415
+    locked: 0
+  - name: NPC
+    uniqueID: 1950233135
     locked: 0
