@@ -344,8 +344,13 @@
 "Assets/Scripts/Enemy.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/Inventory.cs"
+"Assets/Scripts/InventorySlot.cs"
+"Assets/Scripts/InventoryUI.cs"
+"Assets/Scripts/Item.cs"
+"Assets/Scripts/ItemPickup.cs"
 "Assets/Scripts/Player.cs"
 "Assets/Scripts/Portal.cs"
+"Assets/Scripts/UIDontDestroy.cs"
 -langversion:8.0
 
 /deterministic
