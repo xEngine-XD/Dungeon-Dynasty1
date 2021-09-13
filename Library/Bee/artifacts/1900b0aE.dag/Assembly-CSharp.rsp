@@ -342,6 +342,8 @@
 "Assets/Scripts/Collectable.cs"
 "Assets/Scripts/Collidable.cs"
 "Assets/Scripts/Enemy.cs"
+"Assets/Scripts/Equipment.cs"
+"Assets/Scripts/EquipmentManager.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/Inventory.cs"
 "Assets/Scripts/InventorySlot.cs"

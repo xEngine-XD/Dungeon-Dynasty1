@@ -56,20 +56,22 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\UIDontDestroy.cs" />
     <Compile Include="Assets\Scripts\Collidable.cs" />
+    <Compile Include="Assets\Scripts\InventorySlot.cs" />
     <Compile Include="Assets\Scripts\Inventory.cs" />
     <Compile Include="Assets\Scripts\Collectable.cs" />
     <Compile Include="Assets\Scripts\Camera.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\Portal.cs" />
-    <Compile Include="Assets\Scripts\Player.cs" />
-    <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\Chest.cs" />
     <Compile Include="Assets\Scripts\InventoryUI.cs" />
     <Compile Include="Assets\Scripts\Item.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\ItemPickup.cs" />
-    <Compile Include="Assets\Scripts\InventorySlot.cs" />
-    <Compile Include="Assets\Scripts\UIDontDestroy.cs" />
+    <Compile Include="Assets\Scripts\Chest.cs" />
+    <Compile Include="Assets\Scripts\Equipment.cs" />
+    <Compile Include="Assets\Scripts\EquipmentManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
