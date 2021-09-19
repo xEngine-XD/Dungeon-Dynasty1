@@ -5,8 +5,7 @@ using UnityEngine;
 public class ItemPickup : Collectable
 {
     public Item item;
-    Inventory inventory;
-    InventoryUI inventoryUI;
+
     protected override void OnCollect()
     {
         Pickup();

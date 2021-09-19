@@ -7,13 +7,18 @@ public class Equipment : Item
 {
     public int armorModifier;
     public int damageModifier;
+    public int poisonModifier;
+    public int poisonDeflectModifier;
+    public bool piercemodifier;
     public EquipmentSlot equipSlot;
+    public EquipmentType equipmentType;
 
     public override void Use()
     {
         //base.Use();
         EquipmentManager.instance.Equip(this);
         RemoveFromInventory();
+
     }
 }
 public enum EquipmentSlot
@@ -23,5 +28,13 @@ public enum EquipmentSlot
     Legs,
     Weapon,
     Feet
+
+}
+public enum EquipmentType
+{
+    Piercing,
+    Poisoning,
+    Sharp,
+    Magical
 
 }

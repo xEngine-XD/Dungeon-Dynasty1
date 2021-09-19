@@ -14,9 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Helmet of Fire
   damage: 0
-  type: 
   icon: {fileID: 21300000, guid: f6a3cda203e2ce749aa7330ebb96a0f9, type: 3}
   isDefaultItem: 0
   armorModifier: 2
   damageModifier: 1
+  poisonModifier: 2
+  poisonDeflectModifier: 4
+  piercemodifier: 0
   equipSlot: 0
+  equipmentType: 0

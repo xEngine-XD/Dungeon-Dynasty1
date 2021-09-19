@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public List<Sprite> weaponsSprites;
     public int experience;
     public Player player;
-    
+    public PlayerStats playerStats;
     // Start is called before the first frame update
     void Start()
     {
@@ -51,19 +51,5 @@ public class GameManager : MonoBehaviour
         player.transform.position = position;
 
     }
-    /*public void SaveState()
-    {
-        string s = "";
-        s += experience.ToString() + "|";
-        PlayerPrefs.SetString("SaveState", s);
-        Debug.Log("SaveState");
-    }*/
-    /*public void LoadState(Scene scene, LoadSceneMode mode)
-    {
-        if (!PlayerPrefs.HasKey("SaveState"))
-            return;
-        string[] data = PlayerPrefs.GetString("SaveState").Split('|');
-        experience = int.Parse(data[1]);
-        Debug.Log("LoadState");
-    }*/
+
 }

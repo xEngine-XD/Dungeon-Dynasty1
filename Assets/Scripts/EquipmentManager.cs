@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class EquipmentManager : MonoBehaviour
 {
     public Equipment[] currentEquipment;
     public static EquipmentManager instance;
     Inventory inventory;
+    public Image[] characterList;
 
     public delegate void OnEquipmentChanged(Equipment newItem, Equipment oldItem);
     public OnEquipmentChanged onEquipmentChanged;
@@ -20,6 +21,7 @@ public class EquipmentManager : MonoBehaviour
         inventory = Inventory.instance;
         int numSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length;
         currentEquipment = new Equipment[numSlots];
+
     }
 
     public void Equip(Equipment newItem)
@@ -38,6 +40,7 @@ public class EquipmentManager : MonoBehaviour
             onEquipmentChanged.Invoke(newItem, oldItem);
         }
         currentEquipment[slotIndex] = newItem;
+        characterList[slotIndex].sprite = newItem.icon;
     }
     public void Unequip(int slotIndex)
     {

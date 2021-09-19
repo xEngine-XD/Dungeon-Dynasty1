@@ -6,7 +6,7 @@ using UnityEngine;
 public class Item : ScriptableObject { 
     new public string name;
     public float damage;
-    public string type;
+
     public Sprite icon = null;
     public bool isDefaultItem = false;
 
@@ -18,5 +18,6 @@ public class Item : ScriptableObject {
     {
         Inventory.instance.Remove(this);
     }
+    
 
 }

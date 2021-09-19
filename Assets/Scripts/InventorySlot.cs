@@ -7,11 +7,14 @@ public class InventorySlot : MonoBehaviour
 {
     public Image icon;
     public Item item;
+    public Image[] characterList;
     public void AddItem(Item newItem)
     {
         item = newItem;
         icon.sprite = item.icon;
         icon.enabled = true;
+
+        
     }
     public void ClearSlot()
     {
@@ -26,5 +29,11 @@ public class InventorySlot : MonoBehaviour
             item.Use();
         }
     }
+
+    public void AddItemToCharacter(Equipment newEquipment)
+    {
+        characterList[0].sprite = newEquipment.icon;
+    }
+
 
 }
