@@ -859,6 +859,13 @@ MonoBehaviour:
   poisonDamage: 10
   poisonTimer: 3
   target: {fileID: 0}
+  isPoisoned: 0
+  poisonDebuffLength: 0
+  pierceChance: 0
+  magicDamage: 0
+  attackTime: 0
+  canAttack: 1
+  attackRate: 0
 --- !u!61 &295722421
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1229,13 +1236,19 @@ MonoBehaviour:
     baseValue: 5
     modifiers: 
   armor:
-    baseValue: 0
+    baseValue: 5
     modifiers: 
   poisonDamage:
     baseValue: 0
     modifiers: 
   poisonDeflect:
     baseValue: 2
+    modifiers: 
+  MagicDamage:
+    baseValue: 0
+    modifiers: 
+  MagicResist:
+    baseValue: 0
     modifiers: 
   maxHealth: 100
 --- !u!1 &420272668
@@ -3798,6 +3811,13 @@ MonoBehaviour:
   poisonDamage: 0
   poisonTimer: 0
   target: {fileID: 0}
+  isPoisoned: 0
+  poisonDebuffLength: 0
+  pierceChance: 0
+  magicDamage: 0
+  attackTime: 0
+  canAttack: 1
+  attackRate: 0
 --- !u!1 &672312082
 GameObject:
   m_ObjectHideFlags: 0
@@ -10784,10 +10804,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4b63f6e8e264cf4e82edfb2193f5633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
-  poisonDamage: 0
-  poisonTimer: 0
+  enemy: {fileID: 11400000, guid: 9399de216bf4ac74d8255c73c9c22b7a, type: 2}
+  poisonDamage: 10
+  poisonTimer: 3
   target: {fileID: 0}
+  isPoisoned: 0
+  poisonDebuffLength: 2
+  pierceChance: 0.15
+  magicDamage: 20
+  attackTime: 2
+  canAttack: 1
+  attackRate: 2
 --- !u!195 &1187643603
 NavMeshAgent:
   m_ObjectHideFlags: 0

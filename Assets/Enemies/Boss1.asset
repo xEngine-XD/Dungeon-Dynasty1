@@ -13,14 +13,11 @@ MonoBehaviour:
   m_Name: Boss1
   m_EditorClassIdentifier: 
   health: 0
-  damage: 0
+  damage: 5
   moveSpeed: 0
-  player: {fileID: 0}
-  character: {fileID: 0}
   enemyType: 1
-  attackModifiers: 2
+  attackModifiers: 0
   resistances: 0
-  attackModifiers: 2
-  resistances: 0
-  poisonDamage: 10
-  timeOfPoison: 5
+  enemyBehavior: 0
+  attackMeleekDistance: 2
+  attackRangeDistance: 0

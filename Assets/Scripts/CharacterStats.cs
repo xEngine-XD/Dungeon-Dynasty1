@@ -7,21 +7,23 @@ public class CharacterStats : MonoBehaviour
     public Stat armor;
     public Stat poisonDamage;
     public Stat poisonDeflect;
+    public Stat MagicDamage;
+    public Stat MagicResist;
 
     public int maxHealth;
-    public int currentHealth { get; private set; }
+    public float currentHealth { get; private set; }
     void Awake()
     {
         currentHealth = maxHealth;
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        /*if (Input.GetKeyDown(KeyCode.Q))
         {
             TakeDamage(10);
-        }
+        }*/
     }
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         damage -= armor.GetValue();
         damage = Mathf.Clamp(damage, 0, int.MaxValue);
@@ -32,7 +34,7 @@ public class CharacterStats : MonoBehaviour
             Die();
         }
     }
-    public void TakePoisonDamage(int damage)
+    public void TakePoisonDamage(float damage)
     {
         damage -= poisonDeflect.GetValue();
         damage = Mathf.Clamp(damage, 0, int.MaxValue);
@@ -43,10 +45,22 @@ public class CharacterStats : MonoBehaviour
             Die();
         }
     }
-    public void TakePiercingDamage(int damage)
+    public void TakePiercingDamage(float damage)
     {
         damage = Mathf.Clamp(damage, 0, int.MaxValue);
         currentHealth -= damage;
+        Debug.Log(transform.name + " takes " + damage + " damage");
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+    public void TakeMagicDamage(float damage)
+    {
+        damage -= MagicResist.GetValue();
+        damage = Mathf.Clamp(damage, 0, int.MaxValue);
+        currentHealth -= damage;
+        Debug.Log(transform.name + " takes " + damage + " damage");
         if (currentHealth <= 0)
         {
             Die();

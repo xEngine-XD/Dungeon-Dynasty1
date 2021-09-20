@@ -14,7 +14,9 @@ public class Enemy : ScriptableObject
     public EnemyType enemyType;
     public AttackModifiers attackModifiers;
     public Resistances resistances;
-
+    public EnemyBehavior enemyBehavior;
+    public float attackMeleekDistance;
+    public float attackRangeDistance;
 
     public enum Resistances
     {
@@ -34,6 +36,12 @@ public class Enemy : ScriptableObject
     {
         Range,
         Melee
+    }
+    public enum EnemyBehavior
+    {
+        Roam,
+        Wait,
+        Attack
     }
 
 

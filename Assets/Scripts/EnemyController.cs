@@ -10,6 +10,15 @@ public class EnemyController : MonoBehaviour
     public float poisonTimer;
     [SerializeField] Transform target;
     private NavMeshAgent agent;
+    public bool isPoisoned = false;
+    bool poisonEffect = true;
+    public int poisonDebuffLength;
+    private int poisonTemp;
+    public float pierceChance;
+    public float magicDamage;
+    public float attackTime;
+    public bool canAttack = true;
+    public float attackRate;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +26,8 @@ public class EnemyController : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
-        ChooseAttackType();
+        poisonTemp = poisonDebuffLength;
+        //ChooseAttackType();
         
     }
 
@@ -27,7 +37,13 @@ public class EnemyController : MonoBehaviour
         //agent.SetDestination(target.position);
         //agent.Move(target.position);
         //agent.destination = target.position;
-        ChooseAttackType();
+        Move();
+        Hit();
+        //ChooseAttackType();
+        if (isPoisoned)
+        {
+            StartCoroutine("PoisonDamage");
+        }
         //poisonTimer -= Time.deltaTime;
     }
     public void ChooseAttackType()
@@ -35,7 +51,9 @@ public class EnemyController : MonoBehaviour
         switch (enemy.attackModifiers)
         {
             case Enemy.AttackModifiers.Poisoning:
-                PoisonAttack();
+                if (isPoisoned == false)
+                    isPoisoned = true;
+
                 break;
             case Enemy.AttackModifiers.Piercing:
                 PierceAttack();
@@ -48,33 +66,90 @@ public class EnemyController : MonoBehaviour
                 break;
         }
     }
-    public void PoisonAttack()
+    public void Move()
     {
-        //Debug.Log("Attack is poisoned");
-        poisonTimer -= Time.deltaTime;
-        if (poisonTimer <= 0)
+        float distance = Vector3.Distance(transform.position, target.transform.position);
+        if(enemy.enemyType == Enemy.EnemyType.Melee)
         {
-
-            GameManager.instance.playerStats.TakePoisonDamage(poisonDamage);
-            poisonTimer = 2.0f;
-            poisonDamage = 10;
+            if(distance > enemy.attackMeleekDistance)
+            {
+                agent.SetDestination(target.position);
+            }
         }
-       
+    }
+
+    IEnumerator PoisonDamage()
+    {
+        if (poisonEffect && poisonDebuffLength > 0)
+        {
+            GameManager.instance.playerStats.TakePoisonDamage(poisonDamage);
+            poisonEffect = false;
+            yield return new WaitForSeconds(poisonTimer);
+            poisonDebuffLength -= 1;
+            poisonEffect = true;
+        }
+        else if (poisonDebuffLength == 0)
+        {
+            isPoisoned = false;
+            poisonDebuffLength = poisonTemp;
+        }
     }
     public void PierceAttack()
     {
+        float randomValue = Random.value;
+        Debug.Log(randomValue);
+        if (randomValue >= (1f - pierceChance))
+        {
+            GameManager.instance.playerStats.TakePiercingDamage(enemy.damage);
 
+        }
+        else if (randomValue < (1f - pierceChance))
+        {
+            GameManager.instance.playerStats.TakeDamage(enemy.damage);
+
+        }
     }
     public void Attack()
     {
-
+        GameManager.instance.playerStats.TakeDamage(enemy.damage);
     }
     public void MagicalAttack()
     {
-
+        GameManager.instance.playerStats.TakeMagicDamage(magicDamage);
     }
     public void Hit()
     {
+        if (canAttack)
+        {
+            float distance = Vector3.Distance(transform.position, target.transform.position);
+            switch (enemy.enemyType)
+            {
+                case Enemy.EnemyType.Melee:
+
+                    if (distance <= enemy.attackMeleekDistance)
+                    {
+                        ChooseAttackType();
+                    }
+                    break;
+                case Enemy.EnemyType.Range:
+
+                    if (distance <= enemy.attackRangeDistance)
+                    {
+                        ChooseAttackType();
+                    }
+                    break;
+            }
+            canAttack = false;
+        }
+        else
+        {
+            attackTime -= Time.deltaTime;
+            if (attackTime <= 0)
+            {
+                canAttack = true;
+                attackTime = attackRate;
+            }
+        }
 
     }
 
