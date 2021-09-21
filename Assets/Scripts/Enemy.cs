@@ -7,10 +7,10 @@ using UnityEngine;
 public class Enemy : ScriptableObject
 {
     //enemy variables
-    public float health;
     public float damage;
     public float moveSpeed;
     public float armor;
+
     //stats modifiers variables
         //attack speed 
     public float attackTime;
@@ -24,8 +24,6 @@ public class Enemy : ScriptableObject
         //magic modifiers
     public float magicDamage;
     public float magicResist;
-    
-    
 
     //enums 
     public EnemyType enemyType;

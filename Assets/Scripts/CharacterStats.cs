@@ -12,24 +12,18 @@ public class CharacterStats : MonoBehaviour
     public Stat piersingChance;
     public float maxHealth;
     public float currentHealth { get; private set; }
-    void Start()
+    void Awake()
     {
         currentHealth = maxHealth;
     }
-    private void Update()
-    {
-        /*if (Input.GetKeyDown(KeyCode.Q))
-        {
-            TakeDamage(10);
-        }*/
-    }
+
     public void TakeDamage(float damage)
     {
         damage -= armor.GetValue();
         damage = Mathf.Clamp(damage, 0, int.MaxValue);
         currentHealth -= damage;
         Debug.Log(transform.name + " takes " + damage + " damage");
-        if(currentHealth <= 0)
+        if (currentHealth <= 0)
         {
             Die();
         }

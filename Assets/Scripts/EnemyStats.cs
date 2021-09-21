@@ -16,7 +16,7 @@ public class EnemyStats : CharacterStats
     bool poisonEffect = true;
     private float poisonTimer = 1.5f;
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
@@ -26,7 +26,7 @@ public class EnemyStats : CharacterStats
         attackTime = enemy.attackTime;
         attackRate = enemy.attackRate;
         poisonTemp = enemy.poisonDebuffLength;
-        maxHealth = enemy.health;
+        //maxHealth = enemy.health;
         //currentHealth = maxHealth;
         damage.baseValue = enemy.damage;
         armor.baseValue = enemy.armor;
