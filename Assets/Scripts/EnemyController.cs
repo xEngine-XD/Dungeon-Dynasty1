@@ -71,7 +71,7 @@ public class EnemyController : MonoBehaviour
         float distance = Vector3.Distance(transform.position, target.transform.position);
         if(enemy.enemyType == Enemy.EnemyType.Melee)
         {
-            if(distance > enemy.attackMeleekDistance)
+            if(distance > enemy.attackMeleeDistance)
             {
                 agent.SetDestination(target.position);
             }
@@ -126,7 +126,7 @@ public class EnemyController : MonoBehaviour
             {
                 case Enemy.EnemyType.Melee:
 
-                    if (distance <= enemy.attackMeleekDistance)
+                    if (distance <= enemy.attackMeleeDistance)
                     {
                         ChooseAttackType();
                     }

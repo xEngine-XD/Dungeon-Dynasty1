@@ -12,12 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d663f301d88174283d2e38ad45b47c, type: 3}
   m_Name: Boss1
   m_EditorClassIdentifier: 
-  health: 0
+  health: 100
   damage: 5
-  moveSpeed: 0
+  moveSpeed: 10
+  armor: 3
+  attackTime: 2
+  attackRate: 2
+  poisonDebuffLength: 1
+  poisonDamage: 10
+  poisonResist: 5
+  pierceChance: 0.15
+  magicDamage: 20
+  magicResist: 20
   enemyType: 1
   attackModifiers: 0
-  resistances: 0
+  resistances: 1
   enemyBehavior: 0
-  attackMeleekDistance: 2
+  attackMeleeDistance: 2
   attackRangeDistance: 0

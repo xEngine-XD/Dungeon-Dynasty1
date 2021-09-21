@@ -353,6 +353,7 @@
 "Assets/Scripts/Collidable.cs"
 "Assets/Scripts/Enemy.cs"
 "Assets/Scripts/EnemyController.cs"
+"Assets/Scripts/EnemyStats.cs"
 "Assets/Scripts/Equipment.cs"
 "Assets/Scripts/EquipmentManager.cs"
 "Assets/Scripts/GameManager.cs"

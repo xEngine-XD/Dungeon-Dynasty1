@@ -6,21 +6,39 @@ using UnityEngine;
 
 public class Enemy : ScriptableObject
 {
-    public int health;
+    //enemy variables
+    public float health;
     public float damage;
     public float moveSpeed;
-    //public Player player;
-    //public PlayerStats character;
+    public float armor;
+    //stats modifiers variables
+        //attack speed 
+    public float attackTime;
+    public float attackRate;
+        //poison modifiers
+    public int poisonDebuffLength;
+    public float poisonDamage;
+    public float poisonResist;
+        //pierce modifiers
+    public float pierceChance;
+        //magic modifiers
+    public float magicDamage;
+    public float magicResist;
+    
+    
+
+    //enums 
     public EnemyType enemyType;
     public AttackModifiers attackModifiers;
     public Resistances resistances;
     public EnemyBehavior enemyBehavior;
-    public float attackMeleekDistance;
+
+    //attack distance for melee or range
+    public float attackMeleeDistance;
     public float attackRangeDistance;
 
     public enum Resistances
     {
-        Piercing,
         Magical,
         Poisoning,
         None

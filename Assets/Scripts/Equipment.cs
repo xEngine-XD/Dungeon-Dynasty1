@@ -9,7 +9,7 @@ public class Equipment : Item
     public int damageModifier;
     public int poisonModifier;
     public int poisonDeflectModifier;
-    public bool piercemodifier;
+    public float piercemodifier;
     public EquipmentSlot equipSlot;
     public EquipmentType equipmentType;
 
