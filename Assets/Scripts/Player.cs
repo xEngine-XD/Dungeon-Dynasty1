@@ -91,6 +91,7 @@ public class Player : MonoBehaviour
             lastMoveDir = moveDelta;
         }
     }
+    
 
         
 }

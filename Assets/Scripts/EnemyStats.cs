@@ -161,7 +161,7 @@ public class EnemyStats : CharacterStats
     public void PierceAttack()
     {
         float randomValue = Random.value;
-        Debug.Log(randomValue);
+        //Debug.Log(randomValue);
         if (randomValue >= (1f - enemy.pierceChance))
         {
             GameManager.instance.playerStats.TakePiercingDamage(enemy.damage);

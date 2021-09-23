@@ -402,6 +402,7 @@
 "Assets/Scripts/Utilities/Utils/World_Bar.cs"
 "Assets/Scripts/Utilities/Utils/World_Mesh.cs"
 "Assets/Scripts/Utilities/Utils/World_Sprite.cs"
+"Assets/Scripts/Weapon.cs"
 -langversion:8.0
 
 /deterministic

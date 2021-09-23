@@ -98,6 +98,7 @@
     <Compile Include="Assets\Scripts\Utilities\MonoBehaviours\ComponentActions.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\UI_BarMultiple.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\FunctionPeriodic.cs" />
+    <Compile Include="Assets\Scripts\Weapon.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
