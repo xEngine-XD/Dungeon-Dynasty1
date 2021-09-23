@@ -57,6 +57,7 @@ public class Player : MonoBehaviour
             if (moveDelta.y < 0)
             {
                 anim.SetFloat("dirMoveY", -1);
+                anim.SetFloat("speed", 1);
             }
         }
         hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x, 0), Mathf.Abs(moveDelta.x * Time.deltaTime * movespeed), LayerMask.GetMask("NPCs", "Blockings"));
@@ -91,7 +92,8 @@ public class Player : MonoBehaviour
             lastMoveDir = moveDelta;
         }
     }
-    
 
-        
+
+
+
 }
