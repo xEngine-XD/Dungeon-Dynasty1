@@ -59,8 +59,10 @@
     <Compile Include="Assets\Scripts\Utilities\Utils\Button_UI.cs" />
     <Compile Include="Assets\Scripts\UIDontDestroy.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\World_Mesh.cs" />
+    <Compile Include="Assets\Scripts\PlayerCombat.cs" />
     <Compile Include="Assets\Scripts\Utilities\MonoBehaviours\CameraFollowSetup.cs" />
     <Compile Include="Assets\Scripts\Utilities\MonoBehaviours\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\Test\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\World_Bar.cs" />
     <Compile Include="Assets\Scripts\Collidable.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\FunctionUpdater.cs" />
@@ -85,6 +87,7 @@
     <Compile Include="Assets\Scripts\Item.cs" />
     <Compile Include="Assets\Scripts\EnemyStats.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\World_Sprite.cs" />
+    <Compile Include="Assets\Scripts\Test\CharacterController2D.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\UtilsClass.cs" />
     <Compile Include="Assets\Scripts\Utilities\MonoBehaviours\PositionRendererSorter.cs" />
     <Compile Include="Assets\Scripts\Utilities\CMDebug.cs" />
@@ -99,9 +102,6 @@
     <Compile Include="Assets\Scripts\Utilities\MonoBehaviours\ComponentActions.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\UI_BarMultiple.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\FunctionPeriodic.cs" />
-    <Compile Include="Assets\Scripts\PlayerCombat.cs" />
-    <Compile Include="Assets\Scripts\Test\CharacterController2D.cs" />
-    <Compile Include="Assets\Scripts\Test\PlayerController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

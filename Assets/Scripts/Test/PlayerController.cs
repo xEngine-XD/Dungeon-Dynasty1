@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,6 +15,16 @@ public class PlayerController : MonoBehaviour
     private BoxCollider2D boxCollider;
     public Animator anim;
     bool isIdle;
+
+    //attack variables
+    public Transform attackPoint;
+    public float attackRange = 1f;
+    public LayerMask enemyLayer;
+    public float attackRate = 2f;
+    private float nextAttackTime = 0;
+
+
+    //Collider2D[] hitEnemies;
     void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
@@ -24,12 +35,15 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Move();
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Time.time >= nextAttackTime)
         {
-            
-            anim.SetTrigger("Attack");
-
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Attack();
+                nextAttackTime = Time.time + 1f / attackRate;
+            }
         }
+
     }
     void Move()
     {
@@ -89,6 +103,23 @@ public class PlayerController : MonoBehaviour
                     anim.SetFloat("IdleY", -1);
             }
         }
-        Debug.Log(moveVector + "   horizontal=" + horizontalMove + "   vertical=" + verticalMove);
+        //Debug.Log(moveVector + "   horizontal=" + horizontalMove + "   vertical=" + verticalMove);
+    }
+
+    void Attack()
+    {
+
+        anim.SetTrigger("Attack");
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer);
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            Debug.Log("hit " + enemy.name);
+        }
+    }
+    private void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null)
+            return;
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }

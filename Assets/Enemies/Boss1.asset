@@ -27,5 +27,5 @@ MonoBehaviour:
   attackModifiers: 0
   resistances: 1
   enemyBehavior: 0
-  attackMeleeDistance: 2
+  attackMeleeDistance: 1
   attackRangeDistance: 0
