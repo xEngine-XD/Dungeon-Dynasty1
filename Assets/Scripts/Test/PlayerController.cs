@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     //attack variables
     public Transform attackPoint;
     public float attackRange = 1f;
+    public float attackLength = 2f;
     public LayerMask enemyLayer;
     public float attackRate = 2f;
     private float nextAttackTime = 0;
@@ -35,11 +36,13 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Move();
+        //Attack2();
         if (Time.time >= nextAttackTime)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                Attack();
+                //Attack();
+                Attack2();
                 nextAttackTime = Time.time + 1f / attackRate;
             }
         }
@@ -121,5 +124,28 @@ public class PlayerController : MonoBehaviour
         if (attackPoint == null)
             return;
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
+    void Attack2()
+    {
+        /*Ray ray = new Ray(transform.position, moveVector);
+        Debug.DrawRay(ray.origin, ray.direction, Color.cyan);
+        if (Input.GetKey(KeyCode.Space))
+        {
+            RaycastHit hit;
+            Debug.Log(Physics.Raycast(ray, out hit));
+            Debug.Log(hit.transform.name);
+        }*/
+        anim.SetTrigger("Attack");
+        Ray ray = new Ray(transform.position, moveVector * attackRange);
+        Debug.DrawRay(ray.origin, ray.direction, Color.cyan);
+        //RaycastHit hit;
+        RaycastHit2D hit = Physics2D.CircleCast(transform.position, attackRange, transform.TransformDirection(tempMove), attackLength, enemyLayer);
+        //if (Physics.SphereCast(transform.position, 2f, transform.TransformDirection(tempMove), out hit, attackRange))
+        if(hit)
+        {
+            hit.transform.GetComponent<EnemyStats>().TakeDamage(10);
+            Debug.Log(hit.transform.name);
+            
+        }
     }
 }
