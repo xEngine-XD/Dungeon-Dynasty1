@@ -7,17 +7,19 @@ public class CharacterStats : MonoBehaviour
     public Stat armor;
     public Stat poisonDamage;
     public Stat poisonDeflect;
+    public Stat poisonLength;
+    public Stat poisonChance;
     public Stat magicDamage;
     public Stat magicResist;
-    public Stat piersingChance;
+    public Stat piercingChance;
     public float maxHealth;
-    public float currentHealth { get; private set; }
+    public float currentHealth { get; set; }
     void Awake()
     {
         currentHealth = maxHealth;
     }
 
-    public void TakeDamage(float damage)
+    public virtual void TakeDamage(float damage)
     {
         damage -= armor.GetValue();
         damage = Mathf.Clamp(damage, 0, int.MaxValue);

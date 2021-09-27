@@ -5,11 +5,15 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Equipment", menuName = "Inventory/Equipment")]
 public class Equipment : Item
 {
-    public int armorModifier;
-    public int damageModifier;
-    public int poisonModifier;
-    public int poisonDeflectModifier;
+    public float armorModifier;
+    public float damageModifier;
+    public float poisonModifier;
+    public float poisonChance;
+    public float poisonLength;
+    public float poisonDeflectModifier;
     public float piercemodifier;
+    public float criticalModifier;
+    public float criticalMultiplier;
     public EquipmentSlot equipSlot;
     public EquipmentType equipmentType;
 

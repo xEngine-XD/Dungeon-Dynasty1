@@ -836,7 +836,6 @@ GameObject:
   - component: {fileID: 327361015}
   - component: {fileID: 327361019}
   - component: {fileID: 327361016}
-  - component: {fileID: 327361018}
   - component: {fileID: 327361017}
   m_Layer: 3
   m_Name: Player
@@ -962,18 +961,30 @@ MonoBehaviour:
   poisonDeflect:
     baseValue: 2
     modifiers: []
+  poisonLength:
+    baseValue: 0
+    modifiers: []
+  poisonChance:
+    baseValue: 0
+    modifiers: []
   magicDamage:
     baseValue: 0
     modifiers: []
   magicResist:
     baseValue: 0
     modifiers: []
-  piersingChance:
+  piercingChance:
     baseValue: 0
     modifiers: []
   maxHealth: 100
   anim: {fileID: 0}
-  enemiesCollided: []
+  criticalChance:
+    baseValue: 0
+    modifiers: []
+  criticalMultiplier:
+    baseValue: 0
+    modifiers: []
+  isPoisoned: 0
 --- !u!95 &327361017
 Animator:
   serializedVersion: 3
@@ -993,25 +1004,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &327361018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 327361011}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec2762c40cbdde444847072362db72f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 327361017}
-  attackPoint: {fileID: 1972906474}
-  attackRange: 0.5
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 512
-  attackRate: 2
 --- !u!114 &327361019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32282,13 +32274,19 @@ MonoBehaviour:
   poisonDeflect:
     baseValue: 0
     modifiers: []
+  poisonLength:
+    baseValue: 0
+    modifiers: []
+  poisonChance:
+    baseValue: 0
+    modifiers: []
   magicDamage:
     baseValue: 0
     modifiers: []
   magicResist:
     baseValue: 0
     modifiers: []
-  piersingChance:
+  piercingChance:
     baseValue: 0
     modifiers: []
   maxHealth: 100

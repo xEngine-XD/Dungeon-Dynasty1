@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public int experience;
     public Player player;
     public PlayerStats playerStats;
+    public float poisonDebufTimer = 1f;
     // Start is called before the first frame update
     void Start()
     {

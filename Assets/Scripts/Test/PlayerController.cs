@@ -24,12 +24,13 @@ public class PlayerController : MonoBehaviour
     public float attackRate = 2f;
     private float nextAttackTime = 0;
 
-
+    private PlayerStats playerStats;
     //Collider2D[] hitEnemies;
     void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
+        playerStats = GetComponent<PlayerStats>();
     }
 
     // Update is called once per frame
@@ -41,8 +42,7 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                //Attack();
-                Attack2();
+                Attack();
                 nextAttackTime = Time.time + 1f / attackRate;
             }
         }
@@ -69,22 +69,23 @@ public class PlayerController : MonoBehaviour
         if (isIdle == false)
         {
             anim.SetFloat("IdleX", 0);
-            anim.SetFloat("IdleY", 0);
+            anim.SetFloat("IdleY", 0);     
             if (horizontalMove != 0)
             {
+                verticalMove = 0;
                 tempMove.x = horizontalMove;
                 tempMove.y = 0;
                 anim.SetFloat("Speed", horizontalMove);
                 anim.SetBool("RunX", true);
             }
-            else if (verticalMove != 0)
+            if (verticalMove != 0)
             {
+                horizontalMove = 0;
                 tempMove.y = verticalMove;
                 tempMove.x = 0;
                 anim.SetFloat("Speed", verticalMove);
                 anim.SetBool("RunY", true);
-
-            }
+            } 
         }
         if (isIdle)
         {
@@ -109,7 +110,7 @@ public class PlayerController : MonoBehaviour
         //Debug.Log(moveVector + "   horizontal=" + horizontalMove + "   vertical=" + verticalMove);
     }
 
-    void Attack()
+    void Attack2()
     {
 
         anim.SetTrigger("Attack");
@@ -125,16 +126,9 @@ public class PlayerController : MonoBehaviour
             return;
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
-    void Attack2()
+    void Attack()
     {
-        /*Ray ray = new Ray(transform.position, moveVector);
-        Debug.DrawRay(ray.origin, ray.direction, Color.cyan);
-        if (Input.GetKey(KeyCode.Space))
-        {
-            RaycastHit hit;
-            Debug.Log(Physics.Raycast(ray, out hit));
-            Debug.Log(hit.transform.name);
-        }*/
+
         anim.SetTrigger("Attack");
         Ray ray = new Ray(transform.position, moveVector * attackRange);
         Debug.DrawRay(ray.origin, ray.direction, Color.cyan);
@@ -143,8 +137,9 @@ public class PlayerController : MonoBehaviour
         //if (Physics.SphereCast(transform.position, 2f, transform.TransformDirection(tempMove), out hit, attackRange))
         if(hit)
         {
-            hit.transform.GetComponent<EnemyStats>().TakeDamage(10);
-            Debug.Log(hit.transform.name);
+            hit.transform.GetComponent<EnemyStats>().TakeDamageFromPlayer();
+            Debug.Log("hit" + hit.transform.name);
+
             
         }
     }

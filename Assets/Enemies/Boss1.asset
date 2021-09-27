@@ -17,14 +17,14 @@ MonoBehaviour:
   armor: 3
   attackTime: 2
   attackRate: 2
-  poisonDebuffLength: 1
+  poisonDebuffLength: 2
   poisonDamage: 10
   poisonResist: 5
   pierceChance: 0.15
   magicDamage: 20
   magicResist: 20
   enemyType: 1
-  attackModifiers: 0
+  attackModifiers: 2
   resistances: 1
   enemyBehavior: 0
   attackMeleeDistance: 1

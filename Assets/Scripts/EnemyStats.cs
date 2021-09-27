@@ -26,8 +26,6 @@ public class EnemyStats : CharacterStats
         attackTime = enemy.attackTime;
         attackRate = enemy.attackRate;
         poisonTemp = enemy.poisonDebuffLength;
-        //maxHealth = enemy.health;
-        //currentHealth = maxHealth;
         damage.baseValue = enemy.damage;
         armor.baseValue = enemy.armor;
         ChooseResistanceType();
@@ -39,7 +37,7 @@ public class EnemyStats : CharacterStats
     {
         Move();
         Hit();
-        if (isPoisoned)
+        if (GameManager.instance.playerStats.isPoisoned == true)
         {
             StartCoroutine("PoisonDamage");
         }
@@ -52,7 +50,7 @@ public class EnemyStats : CharacterStats
                 poisonDamage.baseValue = enemy.poisonDamage;
                 break;
             case Enemy.AttackModifiers.Piercing:
-                piersingChance.baseValue = enemy.pierceChance;
+                piercingChance.baseValue = enemy.pierceChance;
                 break;
             case Enemy.AttackModifiers.Magical:
                 magicDamage.baseValue = enemy.magicDamage;
@@ -66,8 +64,8 @@ public class EnemyStats : CharacterStats
         switch (enemy.attackModifiers)
         {
             case Enemy.AttackModifiers.Poisoning:
-                if (isPoisoned == false)
-                    isPoisoned = true;
+                if (GameManager.instance.playerStats.isPoisoned == false)
+                    GameManager.instance.playerStats.isPoisoned = true;
 
                 break;
             case Enemy.AttackModifiers.Piercing:
@@ -148,13 +146,14 @@ public class EnemyStats : CharacterStats
         {
             GameManager.instance.playerStats.TakePoisonDamage(poisonDamage.baseValue);
             poisonEffect = false;
-            yield return new WaitForSeconds(poisonTimer);
+            yield return new WaitForSeconds(GameManager.instance.poisonDebufTimer);
             enemy.poisonDebuffLength -= 1;
             poisonEffect = true;
         }
         else if (enemy.poisonDebuffLength == 0)
         {
-            isPoisoned = false;
+            GameManager.instance.playerStats.isPoisoned = false;
+            //isPoisoned = false;
             enemy.poisonDebuffLength = poisonTemp;
         }
     }
@@ -180,5 +179,36 @@ public class EnemyStats : CharacterStats
     public void MagicalAttack()
     {
         GameManager.instance.playerStats.TakeMagicDamage(enemy.magicDamage);
+    }
+    public  void TakeDamageFromPlayer()
+    {
+        float damage = GameManager.instance.playerStats.damage.GetValue();
+        if (GameManager.instance.playerStats.CritDamage() == true)
+        {
+            damage *= GameManager.instance.playerStats.criticalMultiplier.GetValue();
+        }
+        if (damage != 0)
+        {
+            
+            if(GameManager.instance.playerStats.PierceDamage() == true)
+            {
+                TakePiercingDamage(damage);
+            }
+            else if(GameManager.instance.playerStats.PierceDamage() == false)
+            {
+                TakeDamage(damage);
+            }
+        }
+        if(GameManager.instance.playerStats.magicDamage.GetValue() > 0)
+        {
+            TakeMagicDamage(GameManager.instance.playerStats.magicDamage.GetValue());
+        }
+        if (target.GetComponent <PlayerStats>().poisonDamage.GetValue() != 0)
+        {
+            if(target.GetComponent<PlayerStats>().PoisonProc() == true)
+            {
+                TakePoisonDamage(target.GetComponent<PlayerStats>().poisonDamage.GetValue());
+            }
+        }
     }
 }
