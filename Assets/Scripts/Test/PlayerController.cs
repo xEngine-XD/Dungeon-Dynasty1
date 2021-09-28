@@ -25,7 +25,6 @@ public class PlayerController : MonoBehaviour
     private float nextAttackTime = 0;
 
     private PlayerStats playerStats;
-    //Collider2D[] hitEnemies;
     void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
@@ -37,7 +36,6 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Move();
-        //Attack2();
         if (Time.time >= nextAttackTime)
         {
             if (Input.GetKeyDown(KeyCode.Space))
@@ -132,9 +130,7 @@ public class PlayerController : MonoBehaviour
         anim.SetTrigger("Attack");
         Ray ray = new Ray(transform.position, moveVector * attackRange);
         Debug.DrawRay(ray.origin, ray.direction, Color.cyan);
-        //RaycastHit hit;
         RaycastHit2D hit = Physics2D.CircleCast(transform.position, attackRange, transform.TransformDirection(tempMove), attackLength, enemyLayer);
-        //if (Physics.SphereCast(transform.position, 2f, transform.TransformDirection(tempMove), out hit, attackRange))
         if(hit)
         {
             hit.transform.GetComponent<EnemyStats>().TakeDamageFromPlayer();

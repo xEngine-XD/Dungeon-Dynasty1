@@ -19,7 +19,8 @@ MonoBehaviour:
   attackRate: 2
   poisonDebuffLength: 2
   poisonDamage: 10
-  poisonResist: 5
+  poisonResist: 0
+  poisonChance: 0.9
   pierceChance: 0.15
   magicDamage: 20
   magicResist: 20

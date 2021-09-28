@@ -13,8 +13,10 @@ public class EnemyStats : CharacterStats
     public float attackTime;
     public float attackRate;
     public bool isPoisoned = false;
-    bool poisonEffect = true;
-    private float poisonTimer = 1.5f;
+    public bool amIPoisoned = false;
+    private bool poisonEffect = true;
+    //private float poisonTimer = 1.5f;
+    public float poisonedTimer;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,8 @@ public class EnemyStats : CharacterStats
         poisonTemp = enemy.poisonDebuffLength;
         damage.baseValue = enemy.damage;
         armor.baseValue = enemy.armor;
+        poisonChance.baseValue = enemy.poisonChance;
+        poisonedTimer = GameManager.instance.playerStats.poisonLength.GetValue();
         ChooseResistanceType();
         ChooseAttackType();
     }
@@ -40,6 +44,10 @@ public class EnemyStats : CharacterStats
         if (GameManager.instance.playerStats.isPoisoned == true)
         {
             StartCoroutine("PoisonDamage");
+        }
+        if(isPoisoned == true)
+        {
+            StartCoroutine("GetPoisonDamage");
         }
     }
     public void ChooseAttackType()
@@ -64,8 +72,14 @@ public class EnemyStats : CharacterStats
         switch (enemy.attackModifiers)
         {
             case Enemy.AttackModifiers.Poisoning:
-                if (GameManager.instance.playerStats.isPoisoned == false)
-                    GameManager.instance.playerStats.isPoisoned = true;
+                bool poison = PoisonProc();
+                if (poison == true)
+                {
+                    if (GameManager.instance.playerStats.isPoisoned == false)
+                        GameManager.instance.playerStats.isPoisoned = true;
+                }
+                else if (poison == false || GameManager.instance.playerStats.isPoisoned == true)
+                    DefaultAttack();
 
                 break;
             case Enemy.AttackModifiers.Piercing:
@@ -142,6 +156,7 @@ public class EnemyStats : CharacterStats
     }
     IEnumerator PoisonDamage()
     {
+
         if (poisonEffect && enemy.poisonDebuffLength > 0)
         {
             GameManager.instance.playerStats.TakePoisonDamage(poisonDamage.baseValue);
@@ -153,14 +168,42 @@ public class EnemyStats : CharacterStats
         else if (enemy.poisonDebuffLength == 0)
         {
             GameManager.instance.playerStats.isPoisoned = false;
-            //isPoisoned = false;
             enemy.poisonDebuffLength = poisonTemp;
+        }
+    }
+    public bool PoisonProc()
+    {
+        float randomValue = Random.value;
+        if (randomValue >= (1f - poisonChance.GetValue()))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    IEnumerator GetPoisonDamage()
+    {
+        if (amIPoisoned == false && poisonedTimer > 0)
+        {
+            TakePoisonDamage(GameManager.instance.playerStats.poisonDamage.GetValue());
+            amIPoisoned = true;
+           
+            yield return new WaitForSeconds(GameManager.instance.poisonDebufTimer);
+            poisonedTimer -= 1;
+            amIPoisoned = false;
+
+        }
+        else if (poisonedTimer == 0)
+        {
+            isPoisoned = false;
+            poisonedTimer = GameManager.instance.playerStats.poisonLength.GetValue();
         }
     }
     public void PierceAttack()
     {
         float randomValue = Random.value;
-        //Debug.Log(randomValue);
         if (randomValue >= (1f - enemy.pierceChance))
         {
             GameManager.instance.playerStats.TakePiercingDamage(enemy.damage);
@@ -205,9 +248,9 @@ public class EnemyStats : CharacterStats
         }
         if (target.GetComponent <PlayerStats>().poisonDamage.GetValue() != 0)
         {
-            if(target.GetComponent<PlayerStats>().PoisonProc() == true)
+            if(target.GetComponent<PlayerStats>().PoisonProc() == true && isPoisoned == false)
             {
-                TakePoisonDamage(target.GetComponent<PlayerStats>().poisonDamage.GetValue());
+                isPoisoned = true; 
             }
         }
     }

@@ -19,6 +19,7 @@ public class Enemy : ScriptableObject
     public int poisonDebuffLength;
     public float poisonDamage;
     public float poisonResist;
+    public float poisonChance;
         //pierce modifiers
     public float pierceChance;
         //magic modifiers

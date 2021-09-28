@@ -7,9 +7,10 @@ public class PlayerStats : CharacterStats
     public Animator anim;
     public Stat criticalChance;
     public Stat criticalMultiplier;
-    public bool isPoisoned;
+    public bool isPoisoned = false;
     public bool poisonEffect;
     private float poisonTemp;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,7 +47,7 @@ public class PlayerStats : CharacterStats
     }
     private void Update()
     {
-        //Attack();
+
     }
     public bool CritDamage()
     {
@@ -87,33 +88,4 @@ public class PlayerStats : CharacterStats
             return false;
         }
     }
-    public float DoDamage()
-    {
-        float magDmg = magicDamage.GetValue();
-        float dmg = damage.GetValue();
-        float pierce = piercingChance.GetValue();
-        float poison = poisonDamage.GetValue();
-        float crit = criticalChance.GetValue();
-        return dmg;
-    }
-    IEnumerator PoisonDamage()
-    {
-        if (poisonEffect && poisonTemp > 0)
-        {
-            GameManager.instance.playerStats.TakePoisonDamage(poisonDamage.baseValue);
-            poisonEffect = false;
-            yield return new WaitForSeconds(GameManager.instance.poisonDebufTimer);
-            poisonTemp -= 1;
-            poisonEffect = true;
-        }
-        else if (poisonTemp == 0)
-        {
-            GameManager.instance.playerStats.isPoisoned = false;
-            //isPoisoned = false;
-            poisonTemp = poisonLength.GetValue();
-        }
-    }
-
-
-
 }

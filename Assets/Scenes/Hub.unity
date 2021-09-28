@@ -950,22 +950,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage:
-    baseValue: 5
+    baseValue: 0
     modifiers: []
   armor:
     baseValue: 5
     modifiers: []
   poisonDamage:
-    baseValue: 0
+    baseValue: 2
     modifiers: []
   poisonDeflect:
     baseValue: 2
     modifiers: []
   poisonLength:
-    baseValue: 0
+    baseValue: 2
     modifiers: []
   poisonChance:
-    baseValue: 0
+    baseValue: 0.9
     modifiers: []
   magicDamage:
     baseValue: 0
@@ -985,6 +985,7 @@ MonoBehaviour:
     baseValue: 0
     modifiers: []
   isPoisoned: 0
+  poisonEffect: 0
 --- !u!95 &327361017
 Animator:
   serializedVersion: 3
@@ -9486,6 +9487,7 @@ MonoBehaviour:
   experience: 0
   player: {fileID: 0}
   playerStats: {fileID: 327361016}
+  poisonDebufTimer: 1
 --- !u!114 &755798588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32296,6 +32298,8 @@ MonoBehaviour:
   attackTime: 2
   attackRate: 2
   isPoisoned: 0
+  amIPoisoned: 0
+  poisonedTimer: 0
 --- !u!195 &1863766669
 NavMeshAgent:
   m_ObjectHideFlags: 0
