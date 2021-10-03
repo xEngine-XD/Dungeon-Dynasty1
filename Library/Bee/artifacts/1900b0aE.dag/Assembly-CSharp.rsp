@@ -360,6 +360,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/VSSettingsProvider.ref.dll"
+"Assets/PlayerController.cs"
 "Assets/Scripts/Boss.cs"
 "Assets/Scripts/CameraController.cs"
 "Assets/Scripts/CharacterStats.cs"
@@ -376,6 +377,9 @@
 "Assets/Scripts/InventoryUI.cs"
 "Assets/Scripts/Item.cs"
 "Assets/Scripts/ItemPickup.cs"
+"Assets/Scripts/LibrarianNPC.cs"
+"Assets/Scripts/MerchantInventory.cs"
+"Assets/Scripts/MerchantNPC.cs"
 "Assets/Scripts/Player.cs"
 "Assets/Scripts/PlayerCombat.cs"
 "Assets/Scripts/PlayerData.cs"
@@ -383,8 +387,6 @@
 "Assets/Scripts/Portal.cs"
 "Assets/Scripts/SaveSystem.cs"
 "Assets/Scripts/Stat.cs"
-"Assets/Scripts/Test/CharacterController2D.cs"
-"Assets/Scripts/Test/PlayerController.cs"
 "Assets/Scripts/UIDontDestroy.cs"
 "Assets/Scripts/Utilities/Assets.cs"
 "Assets/Scripts/Utilities/CMDebug.cs"
@@ -405,7 +407,6 @@
 "Assets/Scripts/Utilities/Utils/World_Bar.cs"
 "Assets/Scripts/Utilities/Utils/World_Mesh.cs"
 "Assets/Scripts/Utilities/Utils/World_Sprite.cs"
-"Assets/Scripts/Weapon.cs"
 -langversion:8.0
 
 /deterministic

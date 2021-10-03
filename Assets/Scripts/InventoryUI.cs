@@ -8,7 +8,7 @@ public class InventoryUI : MonoBehaviour
     public Transform itemsParent;
     InventorySlot[] slots;
     public GameObject inventoryUI;
-    public GameObject characterWindow;
+
     //public static InventoryUI instance;
     // Start is called before the first frame update
     void Start()
@@ -32,15 +32,7 @@ public class InventoryUI : MonoBehaviour
             else
                 inventoryUI.SetActive(true);
         }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            if (characterWindow.activeSelf == true)
-            {
-                characterWindow.SetActive(false);
-            }
-            else
-                characterWindow.SetActive(true);
-        }
+
     }
     void UpdateUI()
     {
