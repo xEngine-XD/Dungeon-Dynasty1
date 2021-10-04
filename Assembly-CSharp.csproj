@@ -57,12 +57,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Utilities\Utils\Button_UI.cs" />
-    <Compile Include="Assets\Scripts\UIDontDestroy.cs" />
+    <Compile Include="Assets\Scripts\UI\UIDontDestroy.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\World_Mesh.cs" />
-    <Compile Include="Assets\Scripts\PlayerCombat.cs" />
+    <Compile Include="Assets\Scripts\LibrarianNPC.cs" />
     <Compile Include="Assets\Scripts\Utilities\MonoBehaviours\CameraFollowSetup.cs" />
     <Compile Include="Assets\Scripts\Utilities\MonoBehaviours\CameraFollow.cs" />
-    <Compile Include="Assets\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\World_Bar.cs" />
     <Compile Include="Assets\Scripts\Collidable.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\FunctionUpdater.cs" />
@@ -80,31 +80,52 @@
     <Compile Include="Assets\Scripts\Portal.cs" />
     <Compile Include="Assets\Scripts\Equipment.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\UI_TextComplex.cs" />
-    <Compile Include="Assets\Scripts\InventoryUI.cs" />
+    <Compile Include="Assets\Scripts\UI\InventoryUI.cs" />
     <Compile Include="Assets\Scripts\Stat.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\Button_Sprite.cs" />
-    <Compile Include="Assets\Scripts\PlayerData.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerData.cs" />
     <Compile Include="Assets\Scripts\Item.cs" />
     <Compile Include="Assets\Scripts\EnemyStats.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\World_Sprite.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\UtilsClass.cs" />
+    <Compile Include="Assets\Scripts\MerchantNPC.cs" />
     <Compile Include="Assets\Scripts\Utilities\MonoBehaviours\PositionRendererSorter.cs" />
     <Compile Include="Assets\Scripts\Utilities\CMDebug.cs" />
-    <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\LibraryUI.cs" />
     <Compile Include="Assets\Scripts\Utilities\Assets.cs" />
-    <Compile Include="Assets\Scripts\PlayerStats.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\UI_Bar.cs" />
     <Compile Include="Assets\Scripts\ItemPickup.cs" />
+    <Compile Include="Assets\Scripts\MerchantInventory.cs" />
     <Compile Include="Assets\Scripts\Chest.cs" />
     <Compile Include="Assets\Scripts\Utilities\MonoBehaviours\ComponentActions.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\UI_BarMultiple.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\FunctionPeriodic.cs" />
-    <Compile Include="Assets\Scripts\MerchantNPC.cs" />
-    <Compile Include="Assets\Scripts\LibrarianNPC.cs" />
-    <Compile Include="Assets\Scripts\MerchantInventory.cs" />
+    <Compile Include="Assets\Scripts\HealthBar.cs" />
   </ItemGroup>
   <ItemGroup>
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <Reference Include="UnityEngine">
       <HintPath>D:\Apps Libraries\Unity\2021.1.7f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

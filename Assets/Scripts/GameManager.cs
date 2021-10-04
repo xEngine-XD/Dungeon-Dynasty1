@@ -11,19 +11,21 @@ public class GameManager : MonoBehaviour
     public List<Sprite> playerSprites;
     public List<Sprite> weaponsSprites;
     public int experience;
-    public Player player;
+    public PlayerController player;
     public PlayerStats playerStats;
     public float poisonDebufTimer = 1f;
+    HealthBar healthBar;
     // Start is called before the first frame update
     void Start()
     {
-        
+        healthBar = FindObjectOfType<HealthBar>();
+        healthBar.SetMaxHealth(playerStats.maxHealth);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        healthBar.SetHealth(playerStats.currentHealth);
     }
     private void Awake()
     {
