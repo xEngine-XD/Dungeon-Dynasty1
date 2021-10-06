@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
 
     private PlayerStats playerStats;
     public bool canMove = true;
+
+    public float pushback = 2f;
     void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
@@ -143,8 +145,6 @@ public class PlayerController : MonoBehaviour
         {
             hit.transform.GetComponent<EnemyStats>().TakeDamageFromPlayer();
             Debug.Log("hit" + hit.transform.name);
-
-            
         }
     }
 }

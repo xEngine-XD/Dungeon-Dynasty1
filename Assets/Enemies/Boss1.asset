@@ -17,7 +17,7 @@ MonoBehaviour:
   armor: 3
   attackTime: 2
   attackRate: 2
-  poisonDebuffLength: 2
+  poisonDebuffLength: 1
   poisonDamage: 10
   poisonResist: 0
   poisonChance: 0.9

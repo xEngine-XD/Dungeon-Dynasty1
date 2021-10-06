@@ -15,11 +15,12 @@ public class EnemyStats : CharacterStats
     public bool isPoisoned = false;
     public bool amIPoisoned = false;
     private bool poisonEffect = true;
-    //private float poisonTimer = 1.5f;
     public float poisonedTimer;
+    public bool isHit = false;
     // Start is called before the first frame update
     void Start()
     {
+ 
         target = GameObject.FindGameObjectWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
@@ -41,6 +42,10 @@ public class EnemyStats : CharacterStats
     {
         Move();
         Hit();
+        if(isHit == true)
+        {
+            StartCoroutine("Pushback");
+        }
         if (GameManager.instance.playerStats.isPoisoned == true)
         {
             StartCoroutine("PoisonDamage");
@@ -189,11 +194,9 @@ public class EnemyStats : CharacterStats
         {
             TakePoisonDamage(GameManager.instance.playerStats.poisonDamage.GetValue());
             amIPoisoned = true;
-           
             yield return new WaitForSeconds(GameManager.instance.poisonDebufTimer);
             poisonedTimer -= 1;
             amIPoisoned = false;
-
         }
         else if (poisonedTimer == 0)
         {
@@ -207,12 +210,10 @@ public class EnemyStats : CharacterStats
         if (randomValue >= (1f - enemy.pierceChance))
         {
             GameManager.instance.playerStats.TakePiercingDamage(enemy.damage);
-
         }
         else if (randomValue < (1f - enemy.pierceChance))
         {
             GameManager.instance.playerStats.TakeDamage(enemy.damage);
-
         }
     }
     public void DefaultAttack()
@@ -253,5 +254,48 @@ public class EnemyStats : CharacterStats
                 isPoisoned = true; 
             }
         }
+        isHit = true;
+    }
+
+    IEnumerator Pushback()
+    {
+        string dir = AngleDir();
+        if(isHit == true)
+        {
+            if (dir == "right")
+            {
+                transform.position += new Vector3(-10 * Time.deltaTime * GameManager.instance.player.pushback, 0, 0) ;
+            }
+        }
+        yield return new WaitForSeconds(0.1f);
+        isHit = false;
+    }
+
+    public string AngleDir()
+    {
+        Vector2 relativePoint;
+        relativePoint = transform.InverseTransformPoint(target.position);
+        if (relativePoint.x < 0f && Mathf.Abs(relativePoint.x) > Mathf.Abs(relativePoint.y))
+        {
+            Debug.Log("Left");
+            return "left";
+        }
+        if (relativePoint.x > 0f && Mathf.Abs(relativePoint.x) > Mathf.Abs(relativePoint.y))
+        {
+            Debug.Log("Right");
+            return "right";
+        }
+        if (relativePoint.y > 0 && Mathf.Abs(relativePoint.x) < Mathf.Abs(relativePoint.y))
+        {
+            Debug.Log("Above");
+            return "above";
+        }
+        if (relativePoint.y < 0 && Mathf.Abs(relativePoint.x) < Mathf.Abs(relativePoint.y))
+        {
+            Debug.Log("Under");
+            return "under";
+        }
+        else
+            return null;
     }
 }
