@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2500.6667
     height: 1330
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 492}
   m_MaxSize: {x: 10000, y: 10000}
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_MinSize: {x: 912, y: 442}
   m_MaxSize: {x: 22007, y: 10021}
   vertical: 0
-  controlID: 96
+  controlID: 45
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -432,9 +432,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 7.0708914, y: -10.995866, z: -351.09375}
+    m_Target: {x: 521.1738, y: 457.3061, z: -1377.9495}
     speed: 2
-    m_Value: {x: 7.0708914, y: -10.995866, z: -351.09375}
+    m_Value: {x: 486.3097, y: 466.78577, z: -1375.3429}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -485,9 +485,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 24.95963
+    m_Target: 691.46234
     speed: 2
-    m_Value: 24.95963
+    m_Value: 724.0443
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -703,9 +703,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 90a20000
       m_LastClickedID: 0
-      m_ExpandedIDs: 38fbfffff69b0000
+      m_ExpandedIDs: 88a9ffff3cb2ffff48b5ffffb8b5fffff6b5ffff74caffff50ccffff3afbffffc29b0000909c0000649d0000e29d00009ef70000a6f70000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -767,21 +767,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Ngin\Documents\Unity projects\Dungeon Dynasty
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: eca00000
-    m_LastClickedID: 41196
+    m_SelectedIDs: 86a20000
+    m_LastClickedID: 41606
     m_ExpandedIDs: 00000000c0a00000c2a00000c4a00000c6a00000c8a0000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -838,7 +838,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: 4e5e00004c720200d29300007c780000e057000000910000fc9000001a9100001691000056a3000034590000be5c00000a5b0000907b00008c7b0000947b0000c041000016420000bcc600001e9e0000da41000096a2000090a300005af5000066f50000
+    m_ExpandedInstanceIDs: 4e5e00004c720200d29300007c780000e057000000910000fc9000001a9100001691000056a3000034590000be5c00000a5b0000907b00008c7b0000947b0000c041000016420000bcc600001e9e0000da41000096a2000090a300005af5000066f5000092a300007aa30000489f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

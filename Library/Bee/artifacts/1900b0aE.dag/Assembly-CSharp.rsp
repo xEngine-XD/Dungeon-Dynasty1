@@ -383,6 +383,7 @@
 "Assets/Scripts/Player/PlayerController.cs"
 "Assets/Scripts/Player/PlayerData.cs"
 "Assets/Scripts/Player/PlayerStats.cs"
+"Assets/Scripts/Pointer.cs"
 "Assets/Scripts/Portal.cs"
 "Assets/Scripts/SaveSystem.cs"
 "Assets/Scripts/Stat.cs"

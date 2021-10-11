@@ -103,6 +103,7 @@
     <Compile Include="Assets\Scripts\Utilities\MonoBehaviours\ComponentActions.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\UI_BarMultiple.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\FunctionPeriodic.cs" />
+    <Compile Include="Assets\Scripts\Pointer.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
