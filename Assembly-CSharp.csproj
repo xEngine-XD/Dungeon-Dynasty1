@@ -65,12 +65,15 @@
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\World_Bar.cs" />
     <Compile Include="Assets\Scripts\Collidable.cs" />
+    <Compile Include="Assets\Scripts\SaveHandler.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\FunctionUpdater.cs" />
     <Compile Include="Assets\Scripts\InventorySlot.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\FunctionTimer.cs" />
+    <Compile Include="Assets\Scripts\MenuButtons.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Boss.cs" />
     <Compile Include="Assets\Scripts\CharacterStats.cs" />
+    <Compile Include="Assets\Scripts\SaveButton.cs" />
     <Compile Include="Assets\Scripts\EquipmentManager.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\UI_Sprite.cs" />
     <Compile Include="Assets\Scripts\Pointer.cs" />
@@ -80,6 +83,7 @@
     <Compile Include="Assets\Scripts\HealthBar.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
+    <Compile Include="Assets\Scripts\SaveAvailability.cs" />
     <Compile Include="Assets\Scripts\Portal.cs" />
     <Compile Include="Assets\Scripts\Equipment.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\UI_TextComplex.cs" />
@@ -100,17 +104,14 @@
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\UI_Bar.cs" />
     <Compile Include="Assets\Scripts\ItemPickup.cs" />
+    <Compile Include="Assets\Scripts\LoadButton.cs" />
     <Compile Include="Assets\Scripts\MerchantInventory.cs" />
     <Compile Include="Assets\Scripts\Chest.cs" />
     <Compile Include="Assets\Scripts\Utilities\MonoBehaviours\ComponentActions.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\UI_BarMultiple.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\FunctionPeriodic.cs" />
-    <Compile Include="Assets\Scripts\SaveHandler.cs" />
-    <Compile Include="Assets\Scripts\SaveAvailability.cs" />
-    <Compile Include="Assets\Scripts\MenuButtons.cs" />
-    <Compile Include="Assets\Scripts\SaveButton.cs" />
-    <Compile Include="Assets\Scripts\LoadButton.cs" />
-    <Compile Include="Assets\Scripts\EquipedInventory.cs" />
+    <Compile Include="Assets\Scripts\ItemTooltip.cs" />
+    <Compile Include="Assets\Scripts\PlayerStatUI.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

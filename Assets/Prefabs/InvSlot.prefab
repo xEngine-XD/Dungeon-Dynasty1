@@ -223,4 +223,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 39445085535755869}
   item: {fileID: 0}
-  characterList: []
+  tooltip: {fileID: 5001573881631881498, guid: 9e12f7976b3f08544ae2fae7c5d233a3, type: 3}

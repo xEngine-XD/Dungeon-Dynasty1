@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ItemPickup : Collectable
 {
-    public Item item;
+    public Equipment item;
 
     protected override void OnCollect()
     {

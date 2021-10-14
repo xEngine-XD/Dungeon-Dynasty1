@@ -5,7 +5,7 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     public static Inventory instance;
-    public List<Item> items = new List<Item>();
+    public List<Equipment> items = new List<Equipment>();
     public int space = 20;
     public delegate void OnItemChanged();
     public OnItemChanged onItemChangedCallback;
@@ -20,7 +20,7 @@ public class Inventory : MonoBehaviour
         }
         instance = this;
     }
-    public bool Add(Item item)
+    public bool Add(Equipment item)
     {
         if (!item.isDefaultItem)
         {
@@ -36,7 +36,7 @@ public class Inventory : MonoBehaviour
         return true;
 
     }
-    public void Remove(Item item)
+    public void Remove(Equipment item)
     {
         items.Remove(item);
         if (onItemChangedCallback != null)
