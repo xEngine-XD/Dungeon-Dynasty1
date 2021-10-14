@@ -7,7 +7,9 @@ public class EquipmentManager : MonoBehaviour
     public Equipment[] currentEquipment;
     public static EquipmentManager instance;
     Inventory inventory;
-    public Image[] characterList;
+
+
+    public InventorySlot[] playerEquipedItems;
 
     public delegate void OnEquipmentChanged(Equipment newItem, Equipment oldItem);
     public OnEquipmentChanged onEquipmentChanged;
@@ -40,7 +42,8 @@ public class EquipmentManager : MonoBehaviour
             onEquipmentChanged.Invoke(newItem, oldItem);
         }
         currentEquipment[slotIndex] = newItem;
-        characterList[slotIndex].sprite = newItem.icon;
+        playerEquipedItems[slotIndex].AddItem(newItem);
+
     }
     public void Unequip(int slotIndex)
     {
@@ -49,6 +52,7 @@ public class EquipmentManager : MonoBehaviour
             Equipment oldItem = currentEquipment[slotIndex];
             inventory.Add(oldItem);
             currentEquipment[slotIndex] = null;
+            playerEquipedItems[slotIndex].ClearSlot();
             if (onEquipmentChanged != null)
             {
                 onEquipmentChanged.Invoke(null, oldItem);

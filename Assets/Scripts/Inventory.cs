@@ -9,6 +9,8 @@ public class Inventory : MonoBehaviour
     public int space = 20;
     public delegate void OnItemChanged();
     public OnItemChanged onItemChangedCallback;
+
+
     private void Awake()
     {
         if (instance != null)

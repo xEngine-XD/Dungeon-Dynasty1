@@ -7,7 +7,7 @@ public class InventorySlot : MonoBehaviour
 {
     public Image icon;
     public Item item;
-    public Image[] characterList;
+
     public void AddItem(Item newItem)
     {
         item = newItem;
@@ -30,10 +30,7 @@ public class InventorySlot : MonoBehaviour
         }
     }
 
-    public void AddItemToCharacter(Equipment newEquipment)
-    {
-        characterList[0].sprite = newEquipment.icon;
-    }
+
 
 
 }

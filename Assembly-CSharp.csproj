@@ -68,10 +68,12 @@
     <Compile Include="Assets\Scripts\Utilities\Utils\FunctionUpdater.cs" />
     <Compile Include="Assets\Scripts\InventorySlot.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\FunctionTimer.cs" />
+    <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Boss.cs" />
     <Compile Include="Assets\Scripts\CharacterStats.cs" />
     <Compile Include="Assets\Scripts\EquipmentManager.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\UI_Sprite.cs" />
+    <Compile Include="Assets\Scripts\Pointer.cs" />
     <Compile Include="Assets\Scripts\SaveSystem.cs" />
     <Compile Include="Assets\Scripts\Inventory.cs" />
     <Compile Include="Assets\Scripts\Collectable.cs" />
@@ -103,7 +105,12 @@
     <Compile Include="Assets\Scripts\Utilities\MonoBehaviours\ComponentActions.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\UI_BarMultiple.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\FunctionPeriodic.cs" />
-    <Compile Include="Assets\Scripts\Pointer.cs" />
+    <Compile Include="Assets\Scripts\SaveHandler.cs" />
+    <Compile Include="Assets\Scripts\SaveAvailability.cs" />
+    <Compile Include="Assets\Scripts\MenuButtons.cs" />
+    <Compile Include="Assets\Scripts\SaveButton.cs" />
+    <Compile Include="Assets\Scripts\LoadButton.cs" />
+    <Compile Include="Assets\Scripts\EquipedInventory.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

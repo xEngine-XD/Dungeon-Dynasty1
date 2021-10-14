@@ -18,8 +18,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        healthBar = FindObjectOfType<HealthBar>();
-        healthBar.SetMaxHealth(playerStats.maxHealth);
+        //healthBar = FindObjectOfType<HealthBar>();
+        //healthBar.SetMaxHealth(playerStats.maxHealth);
     }
 
     // Update is called once per frame
@@ -36,15 +36,17 @@ public class GameManager : MonoBehaviour
         instance = this;
         //SceneManager.sceneLoaded += LoadState;
         DontDestroyOnLoad(this.gameObject);
+        healthBar = FindObjectOfType<HealthBar>();
+        healthBar.SetMaxHealth(playerStats.maxHealth);
+    }
+    public void SavePlayer(string number)
+    {
+        SaveSystem.SavePlayer(player, number);
+    }
 
-    }
-    public void SavePlayer()
+    public void LoadPlayer(string number)
     {
-        SaveSystem.SavePlayer(player);
-    }
-    public void LoadPlayer()
-    {
-        PlayerData data = SaveSystem.LoadPlayer();
+        PlayerData data = SaveSystem.LoadPlayer(number);
         //player.level = data.level;
         //player.health = data.health;
         Vector3 position;
