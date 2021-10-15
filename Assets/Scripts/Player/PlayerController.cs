@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-
+using CodeMonkey.Utils;
 public class PlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -43,7 +43,8 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                Attack();
+                //Attack();
+                anim.SetTrigger("Attack");
                 nextAttackTime = Time.time + 1f / attackRate;
             }
         }
@@ -137,7 +138,7 @@ public class PlayerController : MonoBehaviour
     void Attack()
     {
 
-        anim.SetTrigger("Attack");
+        //anim.SetTrigger("Attack");
         Ray ray = new Ray(transform.position, moveVector * attackRange);
         Debug.DrawRay(ray.origin, ray.direction, Color.cyan);
         RaycastHit2D hit = Physics2D.CircleCast(transform.position, attackRange, transform.TransformDirection(tempMove), attackLength, enemyLayer);
@@ -145,6 +146,7 @@ public class PlayerController : MonoBehaviour
         {
             hit.transform.GetComponent<EnemyStats>().TakeDamageFromPlayer();
             Debug.Log("hit" + hit.transform.name);
+            
         }
     }
 }

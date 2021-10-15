@@ -35,7 +35,7 @@ namespace CodeMonkey {
 
 
         // All references
-        
+        public Transform dmgPopup;
         public Sprite s_White;
         public Sprite s_Circle;
 

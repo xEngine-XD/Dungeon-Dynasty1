@@ -43,6 +43,7 @@ public class InventoryUI : MonoBehaviour
             {
                 characterUI.SetActive(true);
                 characterUI.GetComponent<PlayerStatUI>().ShowStats();
+                
             }
                 
         }

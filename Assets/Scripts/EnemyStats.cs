@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using CodeMonkey.Utils;
 public class EnemyStats : CharacterStats
 {
     public Enemy enemy;
@@ -17,6 +18,7 @@ public class EnemyStats : CharacterStats
     private bool poisonEffect = true;
     public float poisonedTimer;
     public bool isHit = false;
+    public SpriteRenderer sprite;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +27,7 @@ public class EnemyStats : CharacterStats
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
-
+        sprite = gameObject.GetComponent<SpriteRenderer>();
         attackTime = enemy.attackTime;
         attackRate = enemy.attackRate;
         poisonTemp = enemy.poisonDebuffLength;
@@ -45,14 +47,18 @@ public class EnemyStats : CharacterStats
         if(isHit == true)
         {
             StartCoroutine("Pushback");
+            StartCoroutine("ChangeColorOnHit");
+            Debug.Log("ddd");
         }
         if (GameManager.instance.playerStats.isPoisoned == true)
         {
             StartCoroutine("PoisonDamage");
+            
         }
         if(isPoisoned == true)
         {
             StartCoroutine("GetPoisonDamage");
+            
         }
     }
     public void ChooseAttackType()
@@ -165,8 +171,10 @@ public class EnemyStats : CharacterStats
         if (poisonEffect && enemy.poisonDebuffLength > 0)
         {
             GameManager.instance.playerStats.TakePoisonDamage(poisonDamage.baseValue);
+            
             poisonEffect = false;
             yield return new WaitForSeconds(GameManager.instance.poisonDebufTimer);
+
             enemy.poisonDebuffLength -= 1;
             poisonEffect = true;
         }
@@ -193,6 +201,7 @@ public class EnemyStats : CharacterStats
         if (amIPoisoned == false && poisonedTimer > 0)
         {
             TakePoisonDamage(GameManager.instance.playerStats.poisonDamage.GetValue());
+            DamageUI.Create(transform.position, GameManager.instance.playerStats.poisonDamage.GetValue(), false, true);
             amIPoisoned = true;
             yield return new WaitForSeconds(GameManager.instance.poisonDebufTimer);
             poisonedTimer -= 1;
@@ -227,9 +236,11 @@ public class EnemyStats : CharacterStats
     public  void TakeDamageFromPlayer()
     {
         float damage = GameManager.instance.playerStats.damage.GetValue();
+        bool isCrit = false;
         if (GameManager.instance.playerStats.CritDamage() == true)
         {
             damage *= GameManager.instance.playerStats.criticalMultiplier.GetValue();
+            isCrit = true;
         }
         if (damage != 0)
         {
@@ -255,22 +266,42 @@ public class EnemyStats : CharacterStats
             }
         }
         isHit = true;
+        DamageUI.Create(transform.position, damage, isCrit, false);
     }
 
     IEnumerator Pushback()
     {
         string dir = AngleDir();
-        if(isHit == true)
+        //string color = UtilsClass.GetColorFromString(this.gameObject.GetComponent<SpriteRenderer>().color)
+        if (isHit == true)
         {
             if (dir == "right")
             {
                 transform.position += new Vector3(-10 * Time.deltaTime * GameManager.instance.player.pushback, 0, 0) ;
             }
+            if(dir == "left")
+            {
+                transform.position += new Vector3(10 * Time.deltaTime * GameManager.instance.player.pushback, 0, 0);
+            }
+            if(dir == "under")
+            {
+                transform.position += new Vector3(0, 19 * Time.deltaTime * GameManager.instance.player.pushback, 0);
+            }
+            if(dir == "above")
+            {
+                transform.position += new Vector3(0, -19 * Time.deltaTime * GameManager.instance.player.pushback, 0);
+            }
+            //this.gameObject.GetComponent<SpriteRenderer>().color = new Color(220, 84, 84, 150);
         }
         yield return new WaitForSeconds(0.1f);
         isHit = false;
     }
-
+    public IEnumerator ChangeColorOnHit()
+    {
+        sprite.color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        sprite.color = Color.white;
+    }
     public string AngleDir()
     {
         Vector2 relativePoint;

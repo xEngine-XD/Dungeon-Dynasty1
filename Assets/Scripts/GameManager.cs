@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 
 public class GameManager : MonoBehaviour
@@ -15,6 +16,8 @@ public class GameManager : MonoBehaviour
     public PlayerStats playerStats;
     public float poisonDebufTimer = 1f;
     HealthBar healthBar;
+    public TMP_Text healthNum;
+    public Transform dmgPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +29,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         healthBar.SetHealth(playerStats.currentHealth);
+        healthNum.text = playerStats.currentHealth + "/" + playerStats.maxHealth;
     }
     private void Awake()
     {

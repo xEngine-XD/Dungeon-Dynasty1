@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scripts\UI\UIDontDestroy.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\World_Mesh.cs" />
     <Compile Include="Assets\Scripts\LibrarianNPC.cs" />
+    <Compile Include="Assets\Scripts\ItemTooltip.cs" />
     <Compile Include="Assets\Scripts\Utilities\MonoBehaviours\CameraFollowSetup.cs" />
     <Compile Include="Assets\Scripts\Utilities\MonoBehaviours\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="Assets\Scripts\Boss.cs" />
     <Compile Include="Assets\Scripts\CharacterStats.cs" />
     <Compile Include="Assets\Scripts\SaveButton.cs" />
+    <Compile Include="Assets\Scripts\Utilities\AssetsInst.cs" />
     <Compile Include="Assets\Scripts\EquipmentManager.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\UI_Sprite.cs" />
     <Compile Include="Assets\Scripts\Pointer.cs" />
@@ -98,6 +100,7 @@
     <Compile Include="Assets\Scripts\MerchantNPC.cs" />
     <Compile Include="Assets\Scripts\Utilities\MonoBehaviours\PositionRendererSorter.cs" />
     <Compile Include="Assets\Scripts\Utilities\CMDebug.cs" />
+    <Compile Include="Assets\Scripts\DamageUI.cs" />
     <Compile Include="Assets\Scripts\LibraryUI.cs" />
     <Compile Include="Assets\Scripts\Utilities\Assets.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStats.cs" />
@@ -108,10 +111,9 @@
     <Compile Include="Assets\Scripts\MerchantInventory.cs" />
     <Compile Include="Assets\Scripts\Chest.cs" />
     <Compile Include="Assets\Scripts\Utilities\MonoBehaviours\ComponentActions.cs" />
+    <Compile Include="Assets\Scripts\PlayerStatUI.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\UI_BarMultiple.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\FunctionPeriodic.cs" />
-    <Compile Include="Assets\Scripts\ItemTooltip.cs" />
-    <Compile Include="Assets\Scripts\PlayerStatUI.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
