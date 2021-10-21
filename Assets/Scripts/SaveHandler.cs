@@ -11,6 +11,7 @@ public class SaveHandler : MonoBehaviour
     public LoadButton[] loads;
     public Button saveButton;
     public Button loadButton;
+
     // Start is called before the first frame update
     void Awake()
     {

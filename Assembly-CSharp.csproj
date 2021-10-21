@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\ItemTooltip.cs" />
     <Compile Include="Assets\Scripts\Utilities\MonoBehaviours\CameraFollowSetup.cs" />
     <Compile Include="Assets\Scripts\Utilities\MonoBehaviours\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\SaveGlob.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\World_Bar.cs" />
     <Compile Include="Assets\Scripts\Collidable.cs" />

@@ -24,6 +24,8 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Hub");
         SaveHandler.instance.Test();
+        Time.timeScale = 1;
+
     }
     public void Pause()
     {

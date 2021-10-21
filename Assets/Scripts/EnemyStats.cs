@@ -19,10 +19,12 @@ public class EnemyStats : CharacterStats
     public float poisonedTimer;
     public bool isHit = false;
     public SpriteRenderer sprite;
+    public Animator anim;
+    public bool isMoving = false;
     // Start is called before the first frame update
     void Start()
     {
- 
+        anim = GetComponent<Animator>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
@@ -37,12 +39,14 @@ public class EnemyStats : CharacterStats
         poisonedTimer = GameManager.instance.playerStats.poisonLength.GetValue();
         ChooseResistanceType();
         ChooseAttackType();
+        isMoving = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Move();
+        if(isMoving == true)
+            Move();
         Hit();
         if(isHit == true)
         {
@@ -59,6 +63,12 @@ public class EnemyStats : CharacterStats
         {
             StartCoroutine("GetPoisonDamage");
             
+        }
+        if(currentHealth <= 0)
+        {
+            anim.SetBool("isDead", true);
+            isMoving = false;
+            canAttack = false;
         }
     }
     public void ChooseAttackType()
@@ -127,13 +137,18 @@ public class EnemyStats : CharacterStats
             if (distance > enemy.attackMeleeDistance)
             {
                 agent.SetDestination(target.position);
+                anim.SetBool("isAttacking", true);
             }
+            else
+                anim.SetBool("isAttacking", false);
         }
     }
     public void Hit()
     {
         if (canAttack)
         {
+            
+            
             float distance = Vector3.Distance(transform.position, target.transform.position);
             switch (enemy.enemyType)
             {
@@ -141,7 +156,21 @@ public class EnemyStats : CharacterStats
 
                     if (distance <= enemy.attackMeleeDistance)
                     {
-                        AttackType();
+                        isMoving = false;
+                        anim.SetTrigger("Attack");
+                        string dir = AngleDir();
+                        if(dir == "left")
+                        {
+                            anim.SetInteger("attackDirection", -1);
+                        }
+                        else if (dir == "right")
+                        {
+                            anim.SetInteger("attackDirection", 1);
+                        }
+                        else
+                        {
+                            anim.SetInteger("attackDirection", -1);
+                        }
                     }
                     break;
                 case Enemy.EnemyType.Range:
@@ -153,6 +182,8 @@ public class EnemyStats : CharacterStats
                     break;
             }
             canAttack = false;
+            isMoving = true;
+            anim.SetBool("readyToAttack", false);
         }
         else
         {
@@ -328,5 +359,10 @@ public class EnemyStats : CharacterStats
         }
         else
             return null;
+    }
+    public void DieEnemy()
+    {
+        Destroy(this.gameObject);
+
     }
 }

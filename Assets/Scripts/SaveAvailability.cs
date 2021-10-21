@@ -19,10 +19,10 @@ public class SaveAvailability : MonoBehaviour
     }
     public void Save()
     {
-        GameManager.instance.SavePlayer(number.ToString());
+        //GameManager.instance.SavePlayer(number.ToString());
     }
     public void Load()
     {
-        GameManager.instance.LoadPlayer(number.ToString());
+        //GameManager.instance.LoadPlayer(number.ToString());
     }
 }
