@@ -39,6 +39,7 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Main Menu");
         SaveHandler.instance.Test();
+        Time.timeScale = 1;
     }
     public void SaveProgress()
     {

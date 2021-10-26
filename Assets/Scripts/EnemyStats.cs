@@ -113,6 +113,8 @@ public class EnemyStats : CharacterStats
                 DefaultAttack();
                 break;
         }
+        GameManager.instance.sounds.PlayerHit();
+
     }
     public void ChooseResistanceType()
     {
@@ -298,6 +300,7 @@ public class EnemyStats : CharacterStats
         }
         isHit = true;
         DamageUI.Create(transform.position, damage, isCrit, false);
+        GameManager.instance.sounds.EnemyHit();
     }
 
     IEnumerator Pushback()
@@ -325,6 +328,7 @@ public class EnemyStats : CharacterStats
             //this.gameObject.GetComponent<SpriteRenderer>().color = new Color(220, 84, 84, 150);
         }
         yield return new WaitForSeconds(0.1f);
+
         isHit = false;
     }
     public IEnumerator ChangeColorOnHit()

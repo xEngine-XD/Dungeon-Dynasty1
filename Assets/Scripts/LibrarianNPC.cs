@@ -25,9 +25,14 @@ public class LibrarianNPC : MonoBehaviour
         if (distance < 2.0f)
         {
             button.SetActive(true);
+            
         }
         else
+        {
             button.SetActive(false);
+  
+        }
+
 
 
         if (button.activeSelf)
@@ -38,6 +43,7 @@ public class LibrarianNPC : MonoBehaviour
                 {
                     libraryUI.SetActive(true);
                     GameManager.instance.player.canMove = false;
+                    GameManager.instance.sounds.OpenLibrary();
                 }
             }
             else if (libraryUI.activeSelf)
@@ -46,6 +52,7 @@ public class LibrarianNPC : MonoBehaviour
                 {
                     libraryUI.SetActive(false);
                     GameManager.instance.player.canMove = true;
+                    GameManager.instance.sounds.OpenLibrary();
                 }
             }
 

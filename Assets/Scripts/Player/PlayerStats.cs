@@ -88,4 +88,10 @@ public class PlayerStats : CharacterStats
             return false;
         }
     }
+    public override void Die()
+    {
+        GameManager.instance.sounds.PlayerDie();
+        Time.timeScale = 0;
+        GameManager.instance.dieWindow.SetActive(true);
+    }
 }

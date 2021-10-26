@@ -45,6 +45,7 @@ public class EquipmentManager : MonoBehaviour
         }
         currentEquipment[slotIndex] = newItem;
         playerEquipedItems[slotIndex].AddItem(newItem);
+        GameManager.instance.sounds.ItemEquip();
         
     }
     public void Unequip(int slotIndex)
@@ -54,6 +55,7 @@ public class EquipmentManager : MonoBehaviour
             Equipment oldItem = currentEquipment[slotIndex];
             inventory.Add(oldItem);
             currentEquipment[slotIndex] = null;
+            GameManager.instance.sounds.ItemEquip();
             playerEquipedItems[slotIndex].ClearSlot();
             
             if (onEquipmentChanged != null)

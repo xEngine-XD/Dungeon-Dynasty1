@@ -396,6 +396,7 @@
 "Assets/Scripts/SaveGlob.cs"
 "Assets/Scripts/SaveHandler.cs"
 "Assets/Scripts/SaveSystem.cs"
+"Assets/Scripts/SFX.cs"
 "Assets/Scripts/Stat.cs"
 "Assets/Scripts/UI/InventoryUI.cs"
 "Assets/Scripts/UI/UIDontDestroy.cs"

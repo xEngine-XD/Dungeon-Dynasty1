@@ -72,6 +72,7 @@ public class PlayerController : MonoBehaviour
             isIdle = horizontalMove == 0 && verticalMove == 0;
             if (isIdle == false)
             {
+                //GameManager.instance.sounds.playerWalk.Play();
                 anim.SetFloat("IdleX", 0);
                 anim.SetFloat("IdleY", 0);
                 if (horizontalMove != 0)
@@ -95,6 +96,7 @@ public class PlayerController : MonoBehaviour
             }
             if (isIdle)
             {
+
                 anim.SetFloat("SpeedX", 0);
                 anim.SetFloat("SpeedY", 0);
                 anim.SetBool("RunY", false);
@@ -114,6 +116,7 @@ public class PlayerController : MonoBehaviour
                         anim.SetFloat("IdleY", -1);
                 }
             }
+
         }
         
         //Debug.Log(moveVector + "   horizontal=" + horizontalMove + "   vertical=" + verticalMove);
@@ -137,7 +140,7 @@ public class PlayerController : MonoBehaviour
     }
     void Attack()
     {
-
+        GameManager.instance.sounds.PlayerAttack();
         //anim.SetTrigger("Attack");
         Ray ray = new Ray(transform.position, moveVector * attackRange);
         Debug.DrawRay(ray.origin, ray.direction, Color.cyan);
@@ -146,6 +149,7 @@ public class PlayerController : MonoBehaviour
         {
             hit.transform.GetComponent<EnemyStats>().TakeDamageFromPlayer();
             Debug.Log("hit" + hit.transform.name);
+            GameManager.instance.sounds.EnemyHit();
             
         }
     }
