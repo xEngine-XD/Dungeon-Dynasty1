@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Boss.cs" />
     <Compile Include="Assets\Scripts\CharacterStats.cs" />
+    <Compile Include="Assets\Scripts\SFX.cs" />
     <Compile Include="Assets\Scripts\SaveButton.cs" />
     <Compile Include="Assets\Scripts\Utilities\AssetsInst.cs" />
     <Compile Include="Assets\Scripts\EquipmentManager.cs" />
@@ -115,7 +116,6 @@
     <Compile Include="Assets\Scripts\PlayerStatUI.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\UI_BarMultiple.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\FunctionPeriodic.cs" />
-    <Compile Include="Assets\Scripts\SFX.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
