@@ -367,6 +367,8 @@ public class EnemyStats : CharacterStats
     public void DieEnemy()
     {
         Destroy(this.gameObject);
+        DungeonLoader dungeon = FindObjectOfType<DungeonLoader>();
+        dungeon.isDone = true;
 
     }
 }

@@ -367,6 +367,7 @@
 "Assets/Scripts/Collectable.cs"
 "Assets/Scripts/Collidable.cs"
 "Assets/Scripts/DamageUI.cs"
+"Assets/Scripts/DungeonLoader.cs"
 "Assets/Scripts/Enemy.cs"
 "Assets/Scripts/EnemyStats.cs"
 "Assets/Scripts/Equipment.cs"

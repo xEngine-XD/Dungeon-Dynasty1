@@ -567,7 +567,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 100315600}
   m_OnClick:
     m_PersistentCalls:
@@ -1372,7 +1372,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 268710894}
   m_OnClick:
     m_PersistentCalls:
@@ -13267,7 +13267,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 846699772}
   m_OnClick:
     m_PersistentCalls:
@@ -14468,7 +14468,7 @@ MonoBehaviour:
       - m_Target: {fileID: 755798587}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: LoadPlayer
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -37029,7 +37029,7 @@ MonoBehaviour:
       - m_Target: {fileID: 755798587}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: SavePlayer
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

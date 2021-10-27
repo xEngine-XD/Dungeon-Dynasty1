@@ -63,6 +63,7 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
         }
         instance = this;
+        playerStats = FindObjectOfType<PlayerStats>();
         //SceneManager.sceneLoaded += LoadState;
         //DontDestroyOnLoad(this.gameObject);
         sounds = FindObjectOfType<SFX>();
@@ -79,20 +80,28 @@ public class GameManager : MonoBehaviour
 
     public void LoadPlayer(string number)
     {
+        //exporting binary data
         PlayerData data = SaveSystem.LoadPlayer(number);
-        //player.level = data.level;
-        //player.health = data.health;
-        //SceneManager.LoadScene("Hub");
-        Vector3 position;
-        position.x = data.position[0];
-        position.y = data.position[1];
-        position.z = data.position[2];
-        
-        player.transform.position = position;
+        //position set
+        //Vector3 position;
+        //position.x = data.position[0];
+        //position.y = data.position[1];
+        //position.z = data.position[2];
+        //player.transform.position = position;
+        //stats set
+        playerStats.maxHealth = data.health;
+        playerStats.damage.baseValue = data.pDamage;
+        playerStats.armor.baseValue = data.pArmor;
+        playerStats.poisonChance.baseValue = data.pPoisonChance;
+        playerStats.poisonDamage.baseValue = data.pPoisonDmg;
+        playerStats.poisonDeflect.baseValue = data.pPoisonDeflect;
+        playerStats.criticalChance.baseValue = data.pCritChance;
+        playerStats.criticalMultiplier.baseValue = data.pCritMul;
+        playerStats.piercingChance.baseValue = data.pPiercing;
+        playerStats.magicDamage.baseValue = data.pMagicDmg;
+        playerStats.magicResist.baseValue = data.pMagicResist;
 
-        //playerStats = data.stats;
-        //gameObject.GetComponent<Inventory>().items = data.inventory.items;
-        //gameObject.GetComponent<EquipmentManager>().currentEquipment = data.equipment.currentEquipment;
+
 
         Time.timeScale = 1;
     }
