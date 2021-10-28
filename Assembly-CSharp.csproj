@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\World_Bar.cs" />
     <Compile Include="Assets\Scripts\Collidable.cs" />
+    <Compile Include="Assets\Scripts\DialogueTrigger.cs" />
     <Compile Include="Assets\Scripts\SaveHandler.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\FunctionUpdater.cs" />
     <Compile Include="Assets\Scripts\InventorySlot.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\SaveAvailability.cs" />
+    <Compile Include="Assets\Scripts\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\Portal.cs" />
     <Compile Include="Assets\Scripts\Equipment.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\UI_TextComplex.cs" />
@@ -117,8 +119,6 @@
     <Compile Include="Assets\Scripts\PlayerStatUI.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\UI_BarMultiple.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utils\FunctionPeriodic.cs" />
-    <Compile Include="Assets\Scripts\DialogueManager.cs" />
-    <Compile Include="Assets\Scripts\DialogueTrigger.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
