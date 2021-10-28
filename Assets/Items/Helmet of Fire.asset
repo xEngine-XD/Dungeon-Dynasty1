@@ -16,14 +16,14 @@ MonoBehaviour:
   damage: 0
   icon: {fileID: 1150099364865203868, guid: cae3e4144e1161f4faf562d215f802fc, type: 3}
   isDefaultItem: 0
-  armorModifier: 2
+  armorModifier: 1
   damageModifier: 1
   poisonModifier: 2
   poisonChance: 0
   poisonLength: 0
-  poisonDeflectModifier: 4
+  poisonDeflectModifier: 10
   piercemodifier: 0
   criticalModifier: 0
   criticalMultiplier: 0
   equipSlot: 0
-  equipmentType: 0
+  equipmentType: 1

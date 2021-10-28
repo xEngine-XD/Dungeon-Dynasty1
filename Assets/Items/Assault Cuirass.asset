@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8378e9374e7884da292c2ede84ef44, type: 3}
+  m_Name: Assault Cuirass
+  m_EditorClassIdentifier: 
+  name: Assault Cuirass
+  damage: 0
+  icon: {fileID: 5379564789750641159, guid: cae3e4144e1161f4faf562d215f802fc, type: 3}
+  isDefaultItem: 0
+  armorModifier: 3
+  damageModifier: 0
+  poisonModifier: 0
+  poisonChance: 0
+  poisonLength: 0
+  poisonDeflectModifier: 0
+  piercemodifier: 0.2
+  criticalModifier: 0
+  criticalMultiplier: 0
+  equipSlot: 1
+  equipmentType: 2

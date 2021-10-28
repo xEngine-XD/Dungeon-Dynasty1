@@ -23,8 +23,9 @@ public class GameManager : MonoBehaviour
     public Inventory inv;
     public GameObject[] objectsToActivate;
     public GameObject dieWindow;
-
+    public DialogueManager dialogueManager;
     public SFX sounds;
+    public bool contractSigned = false;
     //private SaveGlob saveGlob;
     // Start is called before the first frame update
     void Start()
@@ -55,6 +56,8 @@ public class GameManager : MonoBehaviour
             else
                 pauseMenu.SetActive(true);
         }
+
+
     }
     private void Awake()
     {
@@ -115,10 +118,11 @@ public class GameManager : MonoBehaviour
     public void ActivateObjects()
     {
         objectsToActivate[0].SetActive(true);
-        objectsToActivate[1].SetActive(true);
-        healthBar = FindObjectOfType<HealthBar>();
-        healthBar.SetMaxHealth(playerStats.maxHealth);
+
     }
-    
+    public void SignContract()
+    {
+        contractSigned = true;
+    }
 
 }

@@ -19316,7 +19316,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Thanks for playing early access! '
+  m_text: 'Thanks for playing pre-alpha version of my game! :) '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -34704,7 +34704,9 @@ MonoBehaviour:
   inv: {fileID: 0}
   objectsToActivate: []
   dieWindow: {fileID: 1588780263}
+  dialogueManager: {fileID: 0}
   sounds: {fileID: 0}
+  contractSigned: 0
 --- !u!4 &2125785828
 Transform:
   m_ObjectHideFlags: 0
