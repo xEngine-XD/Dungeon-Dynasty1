@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
     public DialogueManager dialogueManager;
     public SFX sounds;
     public bool contractSigned = false;
+    public GameObject playerWeapon;
+    public Sprite defaultWeapon;
     //private SaveGlob saveGlob;
     // Start is called before the first frame update
     void Start()

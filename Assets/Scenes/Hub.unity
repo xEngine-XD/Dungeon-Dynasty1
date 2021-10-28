@@ -19147,6 +19147,8 @@ MonoBehaviour:
   dialogueManager: {fileID: 1743223640}
   sounds: {fileID: 0}
   contractSigned: 0
+  playerWeapon: {fileID: 1265497616}
+  defaultWeapon: {fileID: 3980967690270211418, guid: cae3e4144e1161f4faf562d215f802fc, type: 3}
 --- !u!114 &755798588
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -46,6 +46,10 @@ public class EquipmentManager : MonoBehaviour
         currentEquipment[slotIndex] = newItem;
         playerEquipedItems[slotIndex].AddItem(newItem);
         GameManager.instance.sounds.ItemEquip();
+        if(slotIndex == 3)
+        {
+            GameManager.instance.playerWeapon.GetComponent<SpriteRenderer>().sprite = newItem.icon;
+        }
         
     }
     public void Unequip(int slotIndex)
@@ -57,7 +61,10 @@ public class EquipmentManager : MonoBehaviour
             currentEquipment[slotIndex] = null;
             GameManager.instance.sounds.ItemEquip();
             playerEquipedItems[slotIndex].ClearSlot();
-            
+            if(slotIndex == 3)
+            {
+                GameManager.instance.playerWeapon.GetComponent<SpriteRenderer>().sprite = GameManager.instance.defaultWeapon;
+            }
             if (onEquipmentChanged != null)
             {
                 onEquipmentChanged.Invoke(null, oldItem);
