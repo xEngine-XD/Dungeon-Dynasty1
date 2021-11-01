@@ -121,7 +121,7 @@ MonoBehaviour:
   m_MinSize: {x: 911, y: 442}
   m_MaxSize: {x: 22006, y: 10021}
   vertical: 0
-  controlID: 6908
+  controlID: 209
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_MinSize: {x: 201, y: 442}
   m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
-  controlID: 6929
+  controlID: 214
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -202,7 +202,7 @@ MonoBehaviour:
   - {fileID: 16}
   - {fileID: 17}
   m_Selected: 0
-  m_LastSelected: 2
+  m_LastSelected: 1
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -715,7 +715,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 06d1ffff3ed1ffffdad3ffff16d4ffff28d4ffff2cd6ffffeed6ffff1ed9ffffd2dbffff0adcffffa6deffffe2defffff4deffffd2e0ffff3ae1ffff76e1ffff08e2ffff54e2ffffc8e2ffff24e3ffffb4e3ffff4ee6ffffcce7ffff04e8ffff9ceaffffa2eaffffb2eaffff84f5ffff48f6ffff84f6ffff20f9ffff5cf9ffff6ef9fffffaf9ffff2efaffff5cfaffff3afbffffdaf80000e0f90000b4fa000040610100046f0100307a010030810100309a010030a1010010c701007ccd010068dc0100
+      m_ExpandedIDs: 3afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -777,13 +777,13 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Prefabs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Ngin\Documents\Unity projects\Dungeon Dynasty
   m_LockTracker:
@@ -792,7 +792,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 12950000
     m_LastClickedID: 38162
-    m_ExpandedIDs: 00000000dc940000de940000e0940000e2940000e494000000ca9a3b
+    m_ExpandedIDs: 000000009494000096940000989400009a9400009c94000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -820,7 +820,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000dc940000de940000e0940000e2940000e494000000ca9a3b
+    m_ExpandedIDs: 000000009494000096940000989400009a9400009c94000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
