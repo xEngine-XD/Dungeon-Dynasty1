@@ -28,11 +28,15 @@ public class PlayerController : MonoBehaviour
     public bool canMove = true;
 
     public float pushback = 2f;
+
+
+    private Vector2 movement;
     void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
         playerStats = GetComponent<PlayerStats>();
+
     }
 
     // Update is called once per frame
@@ -43,14 +47,50 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                //Attack();
+                canMove = false;
                 anim.SetTrigger("Attack");
                 nextAttackTime = Time.time + 1f / attackRate;
             }
         }
+        
+        
+    }
+    private void FixedUpdate()
+    {
+
+        if (canMove)
+        {
+            movement.Normalize();
+            transform.Translate(movement.x * moveSpeed * Time.fixedDeltaTime, movement.y * moveSpeed * Time.fixedDeltaTime, 0);
+        }
 
     }
-    void Move()
+    public void Move()
+    {
+        if (canMove)
+        {
+            movement.x = Input.GetAxisRaw("Horizontal");
+            movement.y = Input.GetAxisRaw("Vertical");
+            anim.SetFloat("Horizontal", movement.x);
+            anim.SetFloat("Vertical", movement.y);
+            anim.SetFloat("Speed", movement.sqrMagnitude);
+            if (movement.x != 0)
+            {
+                tempMove.x = movement.x;
+                anim.SetFloat("IdleX", tempMove.x);
+                tempMove.y = 0;
+                anim.SetFloat("IdleY", tempMove.y);
+            }
+            if (movement.y != 0)
+            {
+                tempMove.y = movement.y;
+                anim.SetFloat("IdleY", tempMove.y);
+                tempMove.x = 0;
+                anim.SetFloat("IdleX", tempMove.x);
+            }
+        }
+    }
+    void Move2()
     {
         if (canMove)
         {
@@ -141,7 +181,7 @@ public class PlayerController : MonoBehaviour
     void Attack()
     {
         GameManager.instance.sounds.PlayerAttack();
-        //anim.SetTrigger("Attack");
+
         Ray ray = new Ray(transform.position, moveVector * attackRange);
         Debug.DrawRay(ray.origin, ray.direction, Color.cyan);
         RaycastHit2D hit = Physics2D.CircleCast(transform.position, attackRange, transform.TransformDirection(tempMove), attackLength, enemyLayer);
@@ -152,5 +192,10 @@ public class PlayerController : MonoBehaviour
             GameManager.instance.sounds.EnemyHit();
             
         }
+        
+    }
+    void CanMove()
+    {
+        canMove = true;
     }
 }
